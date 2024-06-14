@@ -1,0 +1,2571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- Site Metas -->
+<meta name="keywords" content="castle" />
+<meta name="description" content="primary school site, castle" />
+<meta name="author" content="phenomenal" />
+
+  <title>Castle parent dashboard</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- css libraries -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css" />
+<!--Site icons -->
+<script src="https://kit.fontawesome.com/126c863153.js" crossorigin="anonymous"></script>
+<link rel="icon" href="images/logo2.png" type="image/gif" sizes="16x16">
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/navbar.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="css/parent-dashboard.css" rel="stylesheet" />
+  <link href="css/scroll-to-top.css" rel="stylesheet" />
+</head>
+
+<body>
+<div class="hero_area_dashboard">
+    <!-- header section strats -->
+ <top class="top_section">
+	<div class="logo-section">
+	  <img class="logo" src="images/logo2.png" alt="logo">
+   <span class="sch-name">Castle</span>
+	</div>
+<div class="navArea">
+ <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+  	<label for="menu-icon"></label>
+  	<nav class="nav"> 		
+  		<ul class="nav-list">
+  		<li><a href="index.html">Home</a></li>
+  		<li><a href="our-campus.html">Our campus</a></li>
+  		<li><a href="registration.html">Enrol Child</a></li>
+  		<li><a href="our-team.html">Our team</a></li>
+  		<li><a href="portal-login.html" class="active-link">Parent dashboard</a></li>
+  		<li><a href="news.html">News & Blog</a></li>
+  		<li><a href="contact-us">Contact us</a></li>
+  		</ul>
+  	</nav>
+</div>
+    </top>
+    <!-- end header section -->
+  </div>
+
+<h4 class="heading">Parent dashboard</h4>
+ <div class="w3-container">
+<div class="parent-avatar">
+  <div class="parent-bio">
+    <div class="parent-photo">
+     <img class="parent-logo" src="profilepics/femaleuser18.png" alt="parent-logo" width="100%"/>
+  </div>
+    <div class="parent-info">
+    <h6> <span id="greet"></span> <strong>Mrs Olugbenga</strong> </h6>
+ <table class="parent-details" border="0">
+    <tr>
+      <td>Name:</td>
+      <td>Funmilayo Olugbenga</td>
+    </tr>
+    <tr>
+      <td>Parent ID:</td>
+      <td>D131</td>
+    </tr>
+    <tr>
+      <td>Gender:</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <td>Address:</td>
+     <td>31a, Sam Amusan Street, Lekki, Lagos</td>
+    </tr>
+    <tr>
+      <td>Occupation:</td>
+      <td>Business in Provisions</td>
+    </tr>
+    <tr>
+      <td>Religion:</td>
+      <td>Christian</td>
+    </tr>
+     <tr>
+      <td>Phone:</td>
+      <td>08126539710</td>
+    </tr>
+    <tr>
+      <td>Email address:</td>
+      <td>adefunmi21@yahoo.com</td>
+    </tr>
+  </table>
+ </div>
+  </div>
+  <small>
+    <span id="showDate"></span>
+   • <span id="showTime"></span>
+  </small>
+</div> 
+  <ul id="gridLayout">
+    <li onclick="showMyKids()" class="gridItem">
+   <span class="gridIcon">
+  <i class="fa-solid fa-user-graduate"></i>
+     </span> <br />
+      My kids
+      </li>
+    <li onclick="showPaymentHistory()" class="gridItem blue">
+   <span class="gridIcon">
+    <i class="fa-solid fa-receipt"></i>
+     </span> <br />
+      Payment history
+      </li>
+    <li class="gridItem blue" onclick="showStaffDirectory()">
+   <span class="gridIcon">
+    <i class="fa-solid fa-person-chalkboard"></i>
+     </span> <br />
+      Staff directory
+      </li>
+     <li class="gridItem" onclick="showCalendar()">
+   <span class="gridIcon">
+ <i class="fa-solid fa-calendar-days"></i>
+     </span> <br />
+      School calendar
+      </li>
+   <li class="gridItem" onclick="showPta()">
+   <span class="gridIcon">
+    <i class="fa-solid fa-users-line"></i>
+     </span> <br />
+      PTA
+      </li>
+   <li class="gridItem blue" onclick="showCounseling()">
+   <span class="gridIcon">
+  <i class="fa-solid fa-clipboard-question"></i>
+     </span> <br />
+      Counseling
+      </li>
+  </ul>
+      </div>
+      <hr />
+      
+<!-- my kids -->
+<div id="myKids" class="w3-card w3-margin w3-padding">
+  <h3>My kids (2)</h3>
+  <hr />
+   <button onclick="showCheckResults()" class="w3-button w3-green w3-margin-bottom">
+      View children's academic report
+  </button>
+ <div class="kid-details-grid">
+  <div class="w3-container w3-padding kid-details">
+    <img class="kid-image" src="images/kid1.jpg" alt="logo" width="30%"/>
+  <table class="kid-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>Olugbenga Janet</td>
+      </tr>
+       <tr>
+        <td>Gender:</td>
+        <td>Female</td>
+        </tr>
+       <tr>
+        <td>Age:</td>
+        <td>8</td>
+        </tr>
+       <tr>
+        <td>Date of birth:</td>
+        <td>16 June, 2016</td>
+        </tr>
+       <tr>
+        <td>Class:</td>
+        <td>Primary 4</td>
+      </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CP/20/024</td>
+      </tr>
+       <tr>
+        <td>Admission date:</td>
+        <td>21/02/2020</td>
+      </tr>
+      <tr>
+        <td>#Days school opened (this term):</td>
+        <td>56</td>
+      </tr>
+       <tr>
+        <td>#Days attended (this term):</td>
+        <td>52</td>
+      </tr>
+      <tr>
+        <td>Extracurricular activities group(s):</td>
+        <td>Drama, Press </td>
+      </tr>
+       <tr>
+        <td>Inter-house sports house:</td>
+        <td>Red</td>
+      </tr>
+      <tr>
+        <td>Class position held:</td>
+        <td>Class monitor </td>
+      </tr>
+       <tr>
+        <td>School position held:</td>
+        <td>None</td>
+      </tr>
+       <tr>
+        <td>Last term exam score:</td>
+        <td>83%</td>
+      </tr>
+      <tr>
+        <td>Record(s) held:</td>
+        <td>First female class monitor for Primary 4</td>
+      </tr>
+       <tr>
+        <td>Achievements:</td>
+        <td>
+  • Week Neatness Award
+  <small>- 28/03/2022</small>
+  <br />
+  • Class Quiz Competition Winner 
+  <small>- 08/11/2023</small>
+  <br />
+  • School Female Volleyball Champion
+  <small>- 17/04/2024</small>
+        </td>
+      </tr>
+      <tr>
+        <td>Class teacher:</td>
+        <td>Dr. Lola Olateju <br />
+        <small>07012238126 | tejulola@gmail.com</small>
+        </td>
+      </tr>
+    </table>
+  </div>
+  
+  <div class="w3-container w3-padding kid-details">
+    <img class="kid-image" src="images/kid2.jpg" alt="logo" width="30%"/>
+  <table class="kid-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>Olugbenga Adeola</td>
+      </tr>
+       <tr>
+        <td>Gender:</td>
+        <td>Male</td>
+        </tr>
+       <tr>
+        <td>Age:</td>
+        <td>10</td>
+        </tr>
+       <tr>
+        <td>Date of birth:</td>
+        <td>02 February, 2014</td>
+        </tr>
+       <tr>
+        <td>Class:</td>
+        <td>Primary 5</td>
+      </tr>
+      <tr>
+        <td>Admission ID:</td>
+        <td>CP/19/018</td>
+      </tr>
+       <tr>
+        <td>Admission date:</td>
+        <td>17/11/2019</td>
+      </tr>
+      <tr>
+        <td>#Days school opened (this term):</td>
+        <td>56</td>
+      </tr>
+       <tr>
+       <td>#Days attended (this term):</td>
+        <td>56</td>
+      </tr>
+      <tr>
+        <td>Extracurricular activities group(s):</td>
+        <td>Robotics, Soccer </td>
+      </tr>
+       <tr>
+        <td>Inter-house sports house:</td>
+        <td>Green</td>
+      </tr>
+      <tr>
+        <td>Class position held:</td>
+        <td>Class Secretary </td>
+      </tr>
+       <tr>
+        <td>School position held:</td>
+        <td>Head Prefect Boy</td>
+      </tr>
+       <tr>
+        <td>Last term exam score:</td>
+        <td>98%</td>
+      </tr>
+      <tr>
+        <td>Record(s) held:</td>
+        <td>
+   - Highest math exam score (100%) <br />
+   - First student to obtain A's in all subjects
+          </td>
+      </tr>
+       <tr>
+        <td>Achievements:</td>
+        <td>
+  • Built a Functional Robotic Crane
+  <small>- 29/10/2022</small>
+  <br />
+  • Inter-school Marathon Race Winner 
+  <small>- 18/09/2023</small>
+  <br />
+  • Best Academic Result of the Term
+  <small>- 21/12/2023</small>
+    <br />
+  • Class Award of Record Keeping
+  <small>- 09/01/2024</small>
+        </td>
+      </tr>
+      <tr>
+        <td>Class teacher:</td>
+        <td>Prof. Bayo Adams <br />
+        <small>07062209914 | adebayo098@gmail.com</small>
+        </td>
+      </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+<!-- check results -->
+<div id="checkResults" class="w3-padding">
+ <button onclick="showMyKids()" class="w3-button w3-green w3-margin-bottom">
+     View children's information
+  </button>
+ <div class="session-flex">
+   <h3>Academic reports</h3>
+  <div class="dropdown">
+  <button onclick="toggleDropdown2()" class="dropbtn">
+   <span>SWITCH CHILD
+   </span>
+  <span><i class="fa-solid fa-arrows-rotate"></i></span>
+  </button>
+  <div class="dropdown-content2">
+  <button onclick="toggleChild2()">Janet</button>
+  <button onclick="toggleChild1()">Adeola </button>
+  </div>
+</div>
+ </div> 
+  
+  <!-- second child -->
+ <div id="child2">
+<div class="row justify-content-center">
+  <div class="col-11 col-sm-10 col-md-10 col-lg-11 col-xl-7 text-center p-0 mt-3 mb-5">
+<div class="card px-0 pt-4 pb-0 mt-3 mb-5">
+ <div class="third-term w3-card">
+  <h3>3rd term (Janet) </h3>
+ <div class="slider">
+  <div class="slides">
+    <div id="slide-301">
+      <h4>CA Test Report</h4>
+      <img src="images/ptest03.jpg" alt="test" width="60%"/>
+    </div>
+    <div id="slide-302">
+      <h4>Examination Report Card</h4>
+      <img src="images/exama3.png" alt="test" width="100%"/>
+    </div>
+  </div>
+   <a href="#slide-301">1</a>
+  <a href="#slide-302">2</a>
+</div>
+<a href="pdf/janet-results-2024.pdf" download>
+  <button class="w3-button w3-black w3-margin">
+  Download
+</button>
+</a>
+  </div>
+  <hr />
+  <div class="second-term w3-card">
+  <h3>Second term (Janet)</h3>
+<div class="slider">
+  <div class="slides">
+    <div id="slide-201">
+      <h4>CA Test Report</h4>
+      <img src="images/ptest02.jpg" alt="test" width="60%"/>
+    </div>
+    <div id="slide-202">
+      <h4>Examination Report Card</h4>
+      <img src="images/exama2.png" alt="test" width="100%"/>
+    </div>
+  </div>
+   <a href="#slide-201">1</a>
+  <a href="#slide-202">2</a>
+</div>
+<a href="pdf/janet-results-2024.pdf" download>
+  <button class="w3-button w3-black w3-margin">
+  Download
+</button>
+</a>
+  </div>
+<hr /> 
+<div class="first-term w3-card">
+  <h3>First term (Janet)</h3>
+<div class="slider">
+  <div class="slides">
+    <div id="slide-101">
+      <h4>CA Test Report</h4>
+      <img src="images/ptest01.jpg" alt="test" width="60%"/>
+    </div>
+    <div id="slide-102">
+      <h4>Examination Report Card</h4>
+      <img src="images/exama1.png" alt="test" width="100%"/>
+    </div>
+  </div>
+   <a href="#slide-101">1</a>
+  <a href="#slide-102">2</a>
+</div>
+<a href="pdf/janet-results-2024.pdf" download>
+  <button class="w3-button w3-black w3-margin">
+  Download
+</button>
+</a>
+  </div>
+            </div>
+        </div>
+    </div>
+<div class="progress-details">
+   <h3>Progress chart </h3>
+<div class="table-chart">
+   <div id="column-example-15">
+    <div class="chart-numbers">
+      <span>100</span>
+      <span>80</span>
+      <span>60</span>
+      <span>40</span>
+      <span>20</span>
+      <span>0</span>
+    </div>
+  <table class="charts-css column show-labels multiple show-primary-axis show-data-axes datasets-spacing-4 show-5-secondary-axes">
+  <caption> Column Example #15 </caption>
+ <thead>
+  <tr>
+    <th scope="col"> Year </th> 
+    <th scope="col"> Progress 1</th> 
+    <th scope="col"> Progress 2</th>
+    <th scope="col"> Progress 3</th> 
+  </tr>
+ </thead> 
+ <tbody>
+  <tr>
+    <th scope="row"> Mathematics </th> 
+    <td style="--size: 0.65; background-color:#0089ff"></td> 
+    <td style="--size: 0.59; background-color:#ffb300"></td> 
+    <td style="--size: 0.75; background-color:#00ff7c"></td> 
+  </tr> 
+  <tr>
+    <th scope="row"> English </th> 
+    <td style="--size: 0.71; background-color:#0089ff"></td> 
+    <td style="--size: 0.88; background-color:#ffb300"></td> 
+    <td style="--size: 0.80; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Basic Sci </th> 
+    <td style="--size: 0.67; background-color:#0089ff"></td> 
+    <td style="--size: 0.59; background-color:#ffb300"></td> 
+    <td style="--size: 0.62; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Social Stu </th> 
+    <td style="--size: 0.88; background-color:#0089ff"></td> 
+    <td style="--size: 0.89; background-color:#ffb300"></td> 
+    <td style="--size: 0.85; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> CCA </th> 
+    <td style="--size: 0.77; background-color:#0089ff"></td> 
+    <td style="--size: 0.67; background-color:#ffb300"></td> 
+    <td style="--size: 0.98; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Civic Edu </th> 
+    <td style="--size: 0.55; background-color:#0089ff"></td> 
+    <td style="--size: 0.65; background-color:#ffb300"></td> 
+    <td style="--size: 0.48; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Yoruba </th> 
+    <td style="--size: 0.58; background-color:#0089ff"></td> 
+    <td style="--size: 0.78; background-color:#ffb300"></td> 
+    <td style="--size: 0.89; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> CRS </th> 
+    <td style="--size: 0.48; background-color:#0089ff"></td> 
+    <td style="--size: 0.59; background-color:#ffb300"></td> 
+    <td style="--size: 0.55; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> French </th> 
+    <td style="--size: 0.85; background-color:#0089ff"></td> 
+    <td style="--size: 0.92; background-color:#ffb300"></td> 
+    <td style="--size: 0.97; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Music </th> 
+    <td style="--size: 0.73; background-color:#0089ff"></td> 
+    <td style="--size: 0.76; background-color:#ffb300"></td> 
+    <td style="--size: 0.82; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Agric Sci </th> 
+    <td style="--size: 0.4; background-color:#0089ff"></td> 
+    <td style="--size: 0.5; background-color:#ffb300"></td> 
+    <td style="--size: 0.55; background-color:#00ff7c"></td>
+   </tr>
+   </tbody>
+   </table>
+   </div>
+</div>
+ <div class="chart-legend w3-margin">
+     <ul class="current-term">
+       <li>Third term</li>
+     </ul>
+     <ul class="last-term">
+       <li>Second term</li>
+     </ul>
+     <ul class="two-terms-ago">
+       <li>First term</li>
+     </ul>
+   </div>
+   </div>
+ <h3>Classteacher</h3>
+ <div class="w3-card w3-margin w3-padding col-11 col-sm-10 col-md-10 col-lg-9 col-xl-7">
+    <img src="profilepics/femaleuser1.png" alt="Classteacher" width="100%" />
+<h4>Dr. Lola Olateju <br />
+<small>
+  Classteacher, Primary 4
+</small>
+</h4>
+ </div>
+  </div>
+  
+  <!-- first child -->
+ <div id="child1">
+<div class="row justify-content-center">
+  <div class="col-11 col-sm-10 col-md-10 col-lg-11 col-xl-7 text-center p-0 mt-3 mb-5">
+ <div class="card px-0 pt-4 pb-0 mt-3 mb-5">
+ <div class="third-term w3-card">
+  <h3>3rd term (Adeola)</h3>
+ <div class="slider">
+  <div class="slides">
+    <div id="sslide-301">
+      <h4>CA Test Report</h4>
+      <img src="images/p2test03.jpg" alt="test" width="60%"/>
+    </div>
+    <div id="sslide-302">
+      <h4>Examination Report Card</h4>
+      <img src="images/examb3.png" alt="test" width="100%"/>
+    </div>
+  </div>
+   <a href="#sslide-301">1</a>
+  <a href="#sslide-302">2</a>
+</div>
+<a href="pdf/adeola-results-2024.pdf" download>
+  <button class="w3-button w3-black w3-margin">
+  Download
+</button>
+</a>
+  </div>
+  <hr />
+  <div class="second-term w3-card">
+  <h3>2nd term (Adeola)</h3>
+<div class="slider">
+  <div class="slides">
+    <div id="sslide-201">
+      <h4>CA Test Report</h4>
+      <img src="images/p2test02.jpg" alt="test" width="60%"/>
+    </div>
+    <div id="sslide-202">
+      <h4>Examination Report Card</h4>
+      <img src="images/examb2.png" alt="test" width="100%"/>
+    </div>
+  </div>
+   <a href="#sslide-201">1</a>
+  <a href="#sslide-202">2</a>
+</div>
+<a href="pdf/adeola-results-2024.pdf" download>
+  <button class="w3-button w3-black w3-margin">
+  Download
+</button>
+</a>
+  </div>
+<hr /> 
+<div class="first-term w3-card">
+  <h3>1st term (Adeola)</h3>
+<div class="slider">
+  <div class="slides">
+    <div id="sslide-101">
+      <h4>CA Test Report</h4>
+      <img src="images/p2test01.jpg" alt="test" width="60%"/>
+    </div>
+    <div id="sslide-102">
+      <h4>Examination Report Card</h4>
+      <img src="images/examb1.png" alt="test" width="100%"/>
+    </div>
+  </div>
+   <a href="#sslide-101">1</a>
+  <a href="#sslide-102">2</a>
+</div>
+<a href="pdf/adeola-results-2024.pdf" download>
+  <button class="w3-button w3-black w3-margin">
+  Download
+</button>
+</a>
+  </div>
+            </div>
+        </div>
+    </div>
+<div class="progress-details">
+   <h3>Progress chart </h3>
+<div class="table-chart">
+   <div id="column-example-15">
+    <div class="chart-numbers">
+      <span>100</span>
+      <span>80</span>
+      <span>60</span>
+      <span>40</span>
+      <span>20</span>
+      <span>0</span>
+    </div>
+  <table class="charts-css column show-labels multiple show-primary-axis show-data-axes datasets-spacing-4 show-5-secondary-axes">
+  <caption> Column Example #15 </caption>
+ <thead>
+  <tr>
+    <th scope="col"> Year </th> 
+    <th scope="col"> Progress 1</th> 
+    <th scope="col"> Progress 2</th>
+    <th scope="col"> Progress 3</th> 
+  </tr>
+ </thead> 
+ <tbody>
+  <tr>
+    <th scope="row"> Mathematics </th> 
+    <td style="--size: 0.75; background-color:#0089ff"></td> 
+    <td style="--size: 0.89; background-color:#ffb300"></td> 
+    <td style="--size: 0.95; background-color:#00ff7c"></td> 
+  </tr> 
+  <tr>
+    <th scope="row"> English </th> 
+    <td style="--size: 0.81; background-color:#0089ff"></td> 
+    <td style="--size: 0.78; background-color:#ffb300"></td> 
+    <td style="--size: 0.80; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Basic Sci </th> 
+    <td style="--size: 0.67; background-color:#0089ff"></td> 
+    <td style="--size: 0.89; background-color:#ffb300"></td> 
+    <td style="--size: 0.98; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Social Stu </th> 
+    <td style="--size: 0.68; background-color:#0089ff"></td> 
+    <td style="--size: 0.89; background-color:#ffb300"></td> 
+    <td style="--size: 0.75; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> CCA </th> 
+    <td style="--size: 0.97; background-color:#0089ff"></td> 
+    <td style="--size: 0.77; background-color:#ffb300"></td> 
+    <td style="--size: 0.68; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Civic Edu </th> 
+    <td style="--size: 0.75; background-color:#0089ff"></td> 
+    <td style="--size: 0.65; background-color:#ffb300"></td> 
+    <td style="--size: 0.88; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Yoruba </th> 
+    <td style="--size: 0.88; background-color:#0089ff"></td> 
+    <td style="--size: 0.91; background-color:#ffb300"></td> 
+    <td style="--size: 0.99; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> CRS </th> 
+    <td style="--size: 0.78; background-color:#0089ff"></td> 
+    <td style="--size: 0.59; background-color:#ffb300"></td> 
+    <td style="--size: 0.55; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> French </th> 
+    <td style="--size: 0.85; background-color:#0089ff"></td> 
+    <td style="--size: 0.92; background-color:#ffb300"></td> 
+    <td style="--size: 0.97; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Music </th> 
+    <td style="--size: 0.73; background-color:#0089ff"></td> 
+    <td style="--size: 0.76; background-color:#ffb300"></td> 
+    <td style="--size: 0.82; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Agric Sci </th> 
+    <td style="--size: 0.4; background-color:#0089ff"></td> 
+    <td style="--size: 0.5; background-color:#ffb300"></td> 
+    <td style="--size: 0.55; background-color:#00ff7c"></td>
+   </tr>
+   </tbody>
+   </table>
+   </div>
+</div>
+ <div class="chart-legend w3-margin">
+     <ul class="current-term">
+       <li>Third term</li>
+     </ul>
+     <ul class="last-term">
+       <li>Second term</li>
+     </ul>
+     <ul class="two-terms-ago">
+       <li>First term</li>
+     </ul>
+   </div>
+   </div>
+  <h3>Classteacher</h3>
+ <div class="w3-card w3-margin w3-padding col-11 col-sm-10 col-md-10 col-lg-9 col-xl-7">
+    <img src="profilepics/maleuser14.png" alt="Classteacher" width="100%" />
+<h4>Prof. Bayo Adams <br />
+<small>
+  Classteacher, Primary 5
+</small>
+</h4>
+ </div>
+  </div>
+
+  </div>
+
+<!-- payment history -->
+<div id="paymentHistory" class="w3-card w3-margin w3-padding">
+ <div class="session-flex">
+   <h3>Payment history</h3>
+  <div class="dropdown">
+  <button onclick="toggleDropdown()" class="dropbtn">
+   <span id="academicSession">2023/2024</span>
+  <span><i class="fa-solid fa-arrows-rotate"></i></span>
+  </button>
+  <div class="dropdown-content">
+  <button onclick="toggle24()">2023/2024</button>
+  <button onclick="toggle23()">2022/2023</button>
+  <button onclick="toggle22()">2021/2022</button>
+  </div>
+</div>
+ </div> 
+  <hr />
+  <!-- 23/24 session -->
+ <div id="session24" class="payment-section">
+ <div class="w3-container w3-padding payment-details">
+ <div class="expenses">
+   <p>
+     <span class="expenses-info">
+       Term
+     </span> <br />
+  <span class="expenses-detail">Second
+     </span>
+   </p>
+   <p>
+     <span class="expenses-info">Children
+     </span> <br />
+     <span class="expenses-detail">2 (added)</span>
+   </p>
+   <p>
+     <span class="expenses-info">Due fees</span> <br />
+     <span class="expenses-detail w3-text-red">₦ 23,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total expenses </span> <br />
+     <span class="expenses-detail">₦ 1,973,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total paid </span> <br />
+     <span class="expenses-detail w3-text-green">₦ 1,950,000</span>
+   </p>
+ </div>
+<table class="expenses-table" border="0">
+ <tr>
+  <td>Gardening kit</td>
+  <td>₦ 23,000</td>
+<td class="w3-text-red"><strong>Due</strong></td>
+  <td>- - -</td>
+ </tr>
+ <tr>
+  <td>Excursion to Paris</td>
+  <td>₦ 1,550,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>12/03/2024</td>
+ </tr>
+ <tr>
+  <td>Books & stationeries</td>
+  <td>₦ 50,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>07/01/2024</td>
+ </tr>
+ <tr>
+  <td>Tuition</td>
+  <td>₦ 350,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>03/01/2024</td>
+ </tr>
+    
+    </table>
+ <a href="pdf/olugbenga-combined-payment.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download Full Payment Breakdown
+  </button>
+ </a>
+  </div>
+  <hr />
+<div class="w3-container w3-padding payment-details">
+ <div class="expenses">
+   <p>
+     <span class="expenses-info">
+       Term
+     </span> <br />
+  <span class="expenses-detail">First
+     </span>
+   </p>
+   <p>
+     <span class="expenses-info">Children
+     </span> <br />
+     <span class="expenses-detail">2 (added)</span>
+   </p>
+   <p>
+     <span class="expenses-info">Due fees</span> <br />
+     <span class="expenses-detail w3-text-green">Balanced</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total expenses </span> <br />
+     <span class="expenses-detail">₦ 450,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total paid </span> <br />
+     <span class="expenses-detail w3-text-green">₦ 450,000</span>
+   </p>
+ </div>
+<table class="expenses-table" border="0">
+ <tr>
+  <td>Christmas party</td>
+  <td>₦ 20,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>04/12/2023</td>
+ </tr>
+ <tr>
+  <td>School bus</td>
+  <td>₦ 50,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>12/09/2023</td>
+ </tr>
+ <tr>
+  <td>Books & stationeries</td>
+  <td>₦ 30,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>07/09/2023</td>
+ </tr>
+ <tr>
+  <td>Tuition</td>
+  <td>₦ 350,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>31/08/2023</td>
+ </tr>
+    
+    </table>
+  <a href="pdf/olugbenga-combined-payment.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download Full Payment Breakdown
+  </button>
+ </a>
+  </div>
+  </div>
+  <!-- 22/23 session -->
+ <div id="session23" class="payment-section">
+ <div class="w3-container w3-padding payment-details">
+ <div class="expenses">
+   <p>
+     <span class="expenses-info">
+       Term
+     </span> <br />
+  <span class="expenses-detail">Third
+     </span>
+   </p>
+   <p>
+     <span class="expenses-info">Children
+     </span> <br />
+     <span class="expenses-detail">2 (added)</span>
+   </p>
+   <p>
+     <span class="expenses-info">Due fees</span> <br />
+     <span class="expenses-detail w3-text-green">Balanced</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total expenses </span> <br />
+     <span class="expenses-detail">₦ 470,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total paid </span> <br />
+     <span class="expenses-detail w3-text-green">₦ 470,000</span>
+   </p>
+ </div>
+<table class="expenses-table" border="0">
+ <tr>
+  <td>Graduation party</td>
+  <td>₦ 20,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>14/07/2023</td>
+ </tr>
+ <tr>
+  <td>Excursion to OAU Zoo</td>
+  <td>₦ 20,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>25/06/2023</td>
+ </tr>
+ <tr>
+  <td>School bus</td>
+  <td>₦ 50,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>08/05/2023</td>
+ </tr>
+ <tr>
+  <td>Books & stationeries</td>
+  <td>₦ 30,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>03/05/2023</td>
+ </tr>
+ <tr>
+  <td>Tuition</td>
+  <td>₦ 350,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>01/05/2023</td>
+ </tr>
+    
+    </table>
+ <a href="pdf/olugbenga-combined-payment.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download Full Payment Breakdown
+  </button>
+ </a>
+  </div>
+  <hr />
+<div class="w3-container w3-padding payment-details">
+ <div class="expenses">
+   <p>
+     <span class="expenses-info">
+       Term
+     </span> <br />
+  <span class="expenses-detail">Second
+     </span>
+   </p>
+   <p>
+     <span class="expenses-info">Children
+     </span> <br />
+     <span class="expenses-detail">2 (added)</span>
+   </p>
+   <p>
+     <span class="expenses-info">Due fees</span> <br />
+     <span class="expenses-detail w3-text-green">Balanced</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total expenses </span> <br />
+     <span class="expenses-detail">₦ 450,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total paid </span> <br />
+     <span class="expenses-detail w3-text-green">₦ 450,000</span>
+   </p>
+ </div>
+<table class="expenses-table" border="0">
+ <tr>
+  <td>Inter-house sports competition</td>
+  <td>₦ 20,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>14/03/2023</td>
+ </tr>
+ <tr>
+  <td>School bus</td>
+  <td>₦ 50,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>09/01/2023</td>
+ </tr>
+ <tr>
+  <td>Books & stationeries</td>
+  <td>₦ 30,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>04/01/2023</td>
+ </tr>
+ <tr>
+  <td>Tuition</td>
+  <td>₦ 350,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>02/01/2023</td>
+ </tr>
+    
+    </table>
+ <a href="pdf/olugbenga-combined-payment.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download Full Payment Breakdown
+  </button>
+ </a>
+  </div>
+  <hr />
+ <div class="w3-container w3-padding payment-details">
+ <div class="expenses">
+   <p>
+     <span class="expenses-info">
+       Term
+     </span> <br />
+  <span class="expenses-detail">First
+     </span>
+   </p>
+   <p>
+     <span class="expenses-info">Children
+     </span> <br />
+     <span class="expenses-detail">2 (added)</span>
+   </p>
+   <p>
+     <span class="expenses-info">Due fees</span> <br />
+     <span class="expenses-detail w3-text-green">Balanced</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total expenses </span> <br />
+     <span class="expenses-detail">₦ 350,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total paid </span> <br />
+     <span class="expenses-detail w3-text-green">₦ 350,000</span>
+   </p>
+ </div>
+<table class="expenses-table" border="0">
+ <tr>
+  <td>Christmas party</td>
+  <td>₦ 10,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>13/12/2022</td>
+ </tr>
+ <tr>
+  <td>School bus</td>
+  <td>₦ 30,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>18/09/2022</td>
+ </tr>
+ <tr>
+  <td>Books & stationeries</td>
+  <td>₦ 20,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>12/09/2022</td>
+ </tr>
+ <tr>
+  <td>Tuition</td>
+  <td>₦ 290,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>03/09/2023</td>
+ </tr>
+    
+    </table>
+ <a href="pdf/olugbenga-combined-payment.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download Full Payment Breakdown
+  </button>
+ </a>
+  </div>
+  </div>
+  <!-- 21/22 session -->
+ <div id="session22" class="payment-section">
+ <div class="w3-container w3-padding payment-details">
+ <div class="expenses">
+   <p>
+     <span class="expenses-info">
+       Term
+     </span> <br />
+  <span class="expenses-detail">Third
+     </span>
+   </p>
+   <p>
+     <span class="expenses-info">Children
+     </span> <br />
+     <span class="expenses-detail">2 (added)</span>
+   </p>
+   <p>
+     <span class="expenses-info">Due fees</span> <br />
+     <span class="expenses-detail w3-text-green">Balanced</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total expenses </span> <br />
+     <span class="expenses-detail">₦ 300,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total paid </span> <br />
+     <span class="expenses-detail w3-text-green">₦ 340,000</span>
+   </p>
+ </div>
+<table class="expenses-table" border="0">
+ <tr>
+  <td>Graduation party</td>
+  <td>₦ 10,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>18/07/2022</td>
+ </tr>
+ <tr>
+  <td>Excursion to Airport Lagos</td>
+  <td>₦ 15,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>13/06/2022</td>
+ </tr>
+ <tr>
+  <td>School bus</td>
+  <td>₦ 25,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>04/05/2022</td>
+ </tr>
+ <tr>
+  <td>Books & stationeries</td>
+  <td>₦ 20,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>01/05/2022</td>
+ </tr>
+ <tr>
+  <td>Tuition</td>
+  <td>₦ 270,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>18/04/2022</td>
+ </tr>
+    
+    </table>
+ <a href="pdf/olugbenga-combined-payment.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download Full Payment Breakdown
+  </button>
+ </a>
+  </div>
+  <hr />
+<div class="w3-container w3-padding payment-details">
+ <div class="expenses">
+   <p>
+     <span class="expenses-info">
+       Term
+     </span> <br />
+  <span class="expenses-detail">Second
+     </span>
+   </p>
+   <p>
+     <span class="expenses-info">Children
+     </span> <br />
+     <span class="expenses-detail">2 (added)</span>
+   </p>
+   <p>
+     <span class="expenses-info">Due fees</span> <br />
+     <span class="expenses-detail w3-text-green">Balanced</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total expenses </span> <br />
+     <span class="expenses-detail">₦ 330,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total paid </span> <br />
+     <span class="expenses-detail w3-text-green">₦ 370,000</span>
+   </p>
+ </div>
+<table class="expenses-table" border="0">
+ <tr>
+  <td>Inter-house sports competition</td>
+  <td>₦ 20,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>16/03/2022</td>
+ </tr>
+ <tr>
+  <td>School bus</td>
+  <td>₦ 20,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>09/01/2022</td>
+ </tr>
+ <tr>
+  <td>Books & stationeries</td>
+  <td>₦ 20,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>04/01/2022</td>
+ </tr>
+ <tr>
+  <td>Tuition</td>
+  <td>₦ 270,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>03/01/2022</td>
+ </tr>
+    
+    </table>
+  <a href="pdf/olugbenga-combined-payment.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download Full Payment Breakdown
+  </button>
+ </a>
+  </div>
+  <hr />
+ <div class="w3-container w3-padding payment-details">
+ <div class="expenses">
+   <p>
+     <span class="expenses-info">
+       Term
+     </span> <br />
+  <span class="expenses-detail">First
+     </span>
+   </p>
+   <p>
+     <span class="expenses-info">Children
+     </span> <br />
+     <span class="expenses-detail">2 (added)</span>
+   </p>
+   <p>
+     <span class="expenses-info">Due fees</span> <br />
+     <span class="expenses-detail w3-text-green">Balanced</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total expenses </span> <br />
+     <span class="expenses-detail">₦ 300,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total paid </span> <br />
+     <span class="expenses-detail w3-text-green">₦ 300,000</span>
+   </p>
+ </div>
+<table class="expenses-table" border="0">
+ <tr>
+  <td>Christmas party</td>
+  <td>₦ 10,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>05/12/2021</td>
+ </tr>
+ <tr>
+  <td>School bus</td>
+  <td>₦ 10,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>22/09/2021</td>
+ </tr>
+ <tr>
+  <td>Books & stationeries</td>
+  <td>₦ 10,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>12/09/2021</td>
+ </tr>
+ <tr>
+  <td>Tuition</td>
+  <td>₦ 270,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>03/09/2021</td>
+ </tr>
+    
+    </table>
+  <a href="pdf/olugbenga-combined-payment.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download Full Payment Breakdown
+  </button>
+ </a>
+  </div>
+  </div>
+  </div>
+
+<!-- staff directory -->
+<div id="staffDirectory" class="w3-card w3-margin w3-padding">
+ <div class="staff-flex">
+  <h3>Staff directory</h3>
+<div class="search-area">
+  <span class="search-icon">
+    <i class="fa-solid fa-magnifying-glass fa-beat-fade"></i></span>
+  <input id="searchbar" 
+ onkeyup="search_staff()" 
+ type="text" name="search" 
+ placeholder="Search staff details..">
+</div>
+ 
+ </div> 
+  <hr />
+ <p class="w3-center">Tap/click on staff photo to view</p>
+ <div id="staffList" class="staff-directory">
+ <div class="w3-container w3-padding staff-list">
+<table class="staff-table" border="0">
+ <th>Staff name</th>
+ <th>Photo</th>
+ <th>ID</th>
+ <th>Sex</th>
+ <th>Department</th>
+ <th>Role</th>
+ <th>Classes</th>
+ <th>Subject</th>
+ <th>Qualification</th>
+ <th>Date joined</th>
+ <th>Email</th>
+ <th>Phone</th>
+ <th>Avg. rating</th>
+ <tr class="staff-details">
+  <td class="staff-name">Adewale Charles J.
+  </td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m1.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST024</td>
+  <td>Male</td>
+  <td>STEM</td>
+  <td>Subject Teacher</td>
+  <td>SSS1, JSS1</td>
+  <td>Mathematics</td>
+  <td>M.Sc</td>
+  <td>16 Jan, 2018</td>
+  <td>adewalecharles@gmail.com</td>
+  <td>08097655418</td>
+  <td>4.3 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">
+    Olufemi Blessing B.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f1.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST019</td>
+  <td>Female</td>
+  <td>LING</td>
+  <td>Subject Teacher</td>
+  <td>Primary</td>
+  <td>French</td>
+  <td>B.Sc</td>
+  <td>23 April, 2016</td>
+  <td>blessing0982@gmail.com</td>
+  <td>08097152638</td>
+  <td>4.5 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Okon Peters A.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m2.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST033</td>
+  <td>Male</td>
+  <td>STEM</td>
+  <td>Subject Teacher</td>
+  <td>SSS2, SSS3</td>
+  <td>Physics</td>
+  <td>M.Sc</td>
+  <td>19 May, 2020</td>
+  <td>petersokon21@gmail.com</td>
+  <td>07085621132</td>
+  <td>4.1 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Ani Chukwuebuka J.
+  </td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m3.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST012</td>
+  <td>Male</td>
+  <td>MOT</td>
+  <td>School bus driver</td>
+  <td>High school</td>
+  <td>Nil</td>
+  <td>B.Sc</td>
+  <td>16 Jan, 2008</td>
+  <td>johnchuckwu@gmail.com</td>
+  <td>08077662927</td>
+  <td>4.6 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">
+    Edet David S.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m4.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST009</td>
+  <td>Male</td>
+  <td>LING</td>
+  <td>Subject Teacher</td>
+  <td>Primary</td>
+  <td>Spanish</td>
+  <td>B.Sc</td>
+  <td>29 July, 2007</td>
+  <td>david0862@gmail.com</td>
+  <td>08076241927</td>
+  <td>4.2 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Ajagbe Esther A.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f2.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST021</td>
+  <td>Female</td>
+  <td>BUS</td>
+  <td>Payroll Technician</td>
+  <td>Primary</td>
+  <td>Non Teaching</td>
+  <td>PhD</td>
+  <td>12 Feb, 2020</td>
+  <td>estherajagbe@gmail.com</td>
+  <td>09012255271</td>
+  <td>3.6 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Robert Charles J.
+  </td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m5.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST014</td>
+  <td>Male</td>
+  <td>STEM</td>
+  <td>Subject Teacher</td>
+  <td>JSS</td>
+  <td>Basic Technology</td>
+  <td>B.Sc</td>
+  <td>16 Jan, 2018</td>
+  <td>robert989@gmail.com</td>
+  <td>08099777722</td>
+  <td>4.7 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">
+    Osimeh Udoh T.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m6.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST011</td>
+  <td>Male</td>
+  <td>STS</td>
+  <td>Program Specialist</td>
+  <td>General</td>
+  <td>Non Teaching</td>
+  <td>PhD</td>
+  <td>13 April, 2012</td>
+  <td>udoh@gmail.com</td>
+  <td>08097171528</td>
+  <td>4.9 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Sylvester Lydia R.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f3.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST017</td>
+  <td>Female</td>
+  <td>STEM</td>
+  <td>Subject Teacher</td>
+  <td>High School</td>
+  <td>Chemistry</td>
+  <td>P.Gd</td>
+  <td>17 May, 2021</td>
+  <td>lydia987@gmail.com</td>
+  <td>07012511132</td>
+  <td>3.9 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Peterson Mercy J.
+  </td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f4.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST001</td>
+  <td>Female</td>
+  <td>STEM</td>
+  <td>Subject Teacher</td>
+  <td>High school</td>
+  <td>Biology</td>
+  <td>M.Sc</td>
+  <td>16 Jan, 2019</td>
+  <td>mercy123@gmail.com</td>
+  <td>08021227927</td>
+  <td>4.6 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">
+    Abdulkareem Habeeb D.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m8.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST002</td>
+  <td>Male</td>
+  <td>ICT</td>
+  <td>Director</td>
+  <td>General</td>
+  <td>Non Teaching</td>
+  <td>PhD</td>
+  <td>29 July, 2007</td>
+  <td>ajagbe03@gmail.com</td>
+  <td>08016212527</td>
+  <td>3.4 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Muhammad Aminat A.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f5.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST022</td>
+  <td>Female</td>
+  <td>WES</td>
+  <td>Wellness Coordinator</td>
+  <td>Primary</td>
+  <td>Non Teaching</td>
+  <td>PhD</td>
+  <td>12 Feb, 2020</td>
+  <td>ameenat21@gmail.com</td>
+  <td>09001855271</td>
+  <td>4.9 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Muazi Bello M.
+  </td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m7.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST024</td>
+  <td>Male</td>
+  <td>MOT</td>
+  <td>School Bus Driver</td>
+  <td>Primary</td>
+  <td>Non Teaching</td>
+  <td>B.Sc</td>
+  <td>16 Jan, 2013</td>
+  <td>muazibb@gmail.com</td>
+  <td>08011275418</td>
+  <td>4.8 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">
+    Oluremi Abiodun B.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m8.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST020</td>
+  <td>Male</td>
+  <td>LING</td>
+  <td>Subject Teacher</td>
+  <td>SSS1-3</td>
+  <td>French</td>
+  <td>B.Sc</td>
+  <td>23 April, 2016</td>
+  <td>remiabbey@gmail.com</td>
+  <td>08123152638</td>
+  <td>4.0 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Okoro Michael A.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m9.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST035</td>
+  <td>Male</td>
+  <td>SSC</td>
+  <td>Subject Teacher</td>
+  <td>SSS 1-3</td>
+  <td>Economics</td>
+  <td>M.Sc</td>
+  <td>19 May, 2020</td>
+  <td>ronymike@gmail.com</td>
+  <td>07085612302</td>
+  <td>4.0 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Olowoyo Cynthia J.
+  </td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f6.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST019</td>
+  <td>Female</td>
+  <td>ART</td>
+  <td>Subject teacher</td>
+  <td>SSS 1-3</td>
+  <td>Government</td>
+  <td>B.Sc</td>
+  <td>16 Jan, 2008</td>
+  <td>jmnkwu@gmail.com</td>
+  <td>08077112927</td>
+  <td>3.2 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">
+    Edet Mary E.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f7.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST010</td>
+  <td>Female</td>
+  <td>ART</td>
+  <td>Subject Teacher</td>
+  <td>JSS 1-3</td>
+  <td>Social Studies</td>
+  <td>B.Sc</td>
+  <td>29 July, 2007</td>
+  <td>dreyd0862@gmail.com</td>
+  <td>08124271927</td>
+  <td>4.8 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Ajagbe Akinola M.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m9.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST024</td>
+  <td>Male</td>
+  <td>SSC</td>
+  <td>Class Teacher</td>
+  <td>SSS3</td>
+  <td>Fin. Accounting</td>
+  <td>PhD</td>
+  <td>22 Feb, 2022</td>
+  <td>etyebe@gmail.com</td>
+  <td>09011093271</td>
+  <td>2.9 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Oyetunji Charles J.
+  </td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m10.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST038</td>
+  <td>Male</td>
+  <td>STEM</td>
+  <td>Subject Teacher</td>
+  <td>JSS</td>
+  <td>Basic Science</td>
+  <td>B.Sc</td>
+  <td>16 Jan, 2018</td>
+  <td>rouyte89@gmail.com</td>
+  <td>08012215722</td>
+  <td>4.3 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">
+  Udoh Benedict T.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m11.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST015</td>
+  <td>Male</td>
+  <td>MOT</td>
+  <td>Chief Security Officer</td>
+  <td>Primary</td>
+  <td>Non Teaching</td>
+  <td>HND</td>
+  <td>13 April, 2013</td>
+  <td>ugabriel@gmail.com</td>
+  <td>08012871528</td>
+  <td>4.3 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Abiodun Oluwafemi P.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m3.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST022</td>
+  <td>Male</td>
+  <td>STEM</td>
+  <td>Lab Technician</td>
+  <td>High School</td>
+  <td>Physics</td>
+  <td>HND</td>
+  <td>17 June, 2023</td>
+  <td>chiro9@gmail.com</td>
+  <td>07012510196</td>
+  <td>4.0 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Anita Mercy J.
+  </td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f9.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST009</td>
+  <td>Female</td>
+  <td>ICT</td>
+  <td>Data System Specialist</td>
+  <td>General</td>
+  <td>Non Teaching</td>
+  <td>M.Sc</td>
+  <td>16 Jan, 2019</td>
+  <td>anita123@gmail.com</td>
+  <td>08021211092</td>
+  <td>4.0 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">
+    Saliu Waliyat D.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f7.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST035</td>
+  <td>Female</td>
+  <td>ART</td>
+  <td>Subject Teacher</td>
+  <td>SSS 1-3</td>
+  <td>Literature</td>
+  <td>PhD</td>
+  <td>12 July, 2009</td>
+  <td>ajioung03@gmail.com</td>
+  <td>08016112787</td>
+  <td>4.8 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Patrick Diana A.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f3.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST028</td>
+  <td>Female</td>
+  <td>BUS</td>
+  <td>Accountant</td>
+  <td>Primary</td>
+  <td>Non Teaching</td>
+  <td>HND</td>
+  <td>12 Feb, 2023</td>
+  <td>reyut21@gmail.com</td>
+  <td>09001112201</td>
+  <td>3.9 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Oyewole Ruben J.
+  </td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m5.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST032</td>
+  <td>Male</td>
+  <td>MOT</td>
+  <td>Maintenance Worker</td>
+  <td>General</td>
+  <td>Non Teaching</td>
+  <td>M.Sc</td>
+  <td>16 Jan, 2019</td>
+  <td>reecardo@gmail.com</td>
+  <td>08012655008</td>
+  <td>4.9 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">
+    Olayemi Blessing B.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f2.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST013</td>
+  <td>Female</td>
+  <td>STEM</td>
+  <td>Subject Teacher</td>
+  <td>Primary</td>
+  <td>CCA</td>
+  <td>B.Sc</td>
+  <td>23 April, 2016</td>
+  <td>roykeane@gmail.com</td>
+  <td>08097157762</td>
+  <td>4.8 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Olaniyi Victoria A.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f1.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST036</td>
+  <td>Female</td>
+  <td>STS</td>
+  <td>Counsellor</td>
+  <td>General</td>
+  <td>Counselling</td>
+  <td>PhD</td>
+  <td>19 March, 2020</td>
+  <td>peoaiauon21@gmail.com</td>
+  <td>07085810232</td>
+  <td>4.7 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Ani Florence M.
+  </td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f2.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST029</td>
+  <td>Female</td>
+  <td>WES</td>
+  <td>School Nurse</td>
+  <td>General</td>
+  <td>Non Teaching</td>
+  <td>B.Sc</td>
+  <td>18 Jan, 2009</td>
+  <td>johiuywu@gmail.com</td>
+  <td>08077699886</td>
+  <td>3.5 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">
+    Adio Abosede S.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f6.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST004</td>
+  <td>Female</td>
+  <td>WES</td>
+  <td>School Doctor</td>
+  <td>General</td>
+  <td>Non Teaching</td>
+  <td>PhD</td>
+  <td>29 July, 2007</td>
+  <td>dreeya08@gmail.com</td>
+  <td>08076241011</td>
+  <td>4.6 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Iweala Esther A.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f3.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST031</td>
+  <td>Female</td>
+  <td>SGR</td>
+  <td>Gardening Instructor</td>
+  <td>Primary</td>
+  <td>Agric Science</td>
+  <td>PhD</td>
+  <td>13 Feb, 2020</td>
+  <td>estoutel@gmail.com</td>
+  <td>09012122771</td>
+  <td>4.0 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Reuel Charles J.
+  </td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m1.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST019</td>
+  <td>Male</td>
+  <td>SGR</td>
+  <td>Games Master</td>
+  <td>General</td>
+  <td>PHE</td>
+  <td>B.Sc</td>
+  <td>16 Jan, 2019</td>
+  <td>ropq9t989@gmail.com</td>
+  <td>08099771216</td>
+  <td>4.3 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">
+    Olutayo Tegha T.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f9.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST020</td>
+  <td>Female</td>
+  <td>LING</td>
+  <td>Subject Teacher</td>
+  <td>SSS1-3</td>
+  <td>English Lang</td>
+  <td>PhD</td>
+  <td>13 April, 2022</td>
+  <td>udoreal@gmail.com</td>
+  <td>08097171289</td>
+  <td>4.3 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Amoh Elizabeth P.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f1.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST037</td>
+  <td>Female</td>
+  <td>STEM</td>
+  <td>Subject Teacher</td>
+  <td>Primary</td>
+  <td>Mathematics</td>
+  <td>P.Gd</td>
+  <td>17 May, 2021</td>
+  <td>lyuou6@gmail.com</td>
+  <td>07012522172</td>
+  <td>4.0 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Sani Mercy J.
+  </td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f5.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST014</td>
+  <td>Female</td>
+  <td>STEM</td>
+  <td>Subject Teacher</td>
+  <td>Primary</td>
+  <td>Basic Science</td>
+  <td>B.Sc</td>
+  <td>16 Jan, 2021</td>
+  <td>mrouch3@gmail.com</td>
+  <td>08021233218</td>
+  <td>4.2 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">
+    Abdulwajeed Habeebah S.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m11.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST003</td>
+  <td>Male</td>
+  <td>LING</td>
+  <td>Subject Teacher</td>
+  <td>Primary</td>
+  <td>English Lang</td>
+  <td>HND</td>
+  <td>23 July, 2011</td>
+  <td>ajaoil3@gmail.com</td>
+  <td>08016211124</td>
+  <td>4.9 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Muhammad Maryam A.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f1.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST037</td>
+  <td>Female</td>
+  <td>WES</td>
+  <td>Wellness Instructor</td>
+  <td>Primary</td>
+  <td>PHE</td>
+  <td>PhD</td>
+  <td>12 Feb, 2020</td>
+  <td>ameweut21@gmail.com</td>
+  <td>09001851126</td>
+  <td>3.9 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Samiu Bello M.
+  </td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m1.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST034</td>
+  <td>Male</td>
+  <td>STS</td>
+  <td>Exam Officer</td>
+  <td>High School</td>
+  <td>Non Teaching</td>
+  <td>M.Sc</td>
+  <td>16 Jan, 2014</td>
+  <td>muabello@gmail.com</td>
+  <td>08126275418</td>
+  <td>4.5 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">
+    John Abiodun B.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m7.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST022</td>
+  <td>Male</td>
+  <td>LING</td>
+  <td>Subject Teacher</td>
+  <td>JSS1-3</td>
+  <td>Spanish</td>
+  <td>B.Sc</td>
+  <td>23 April, 2019</td>
+  <td>remiaeyy@gmail.com</td>
+  <td>08123112275</td>
+  <td>4.1 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Godwin Michael A.</td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/m5.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST036</td>
+  <td>Male</td>
+  <td>SSC</td>
+  <td>Subject Teacher</td>
+  <td>SSS 1-3</td>
+  <td>Commerce</td>
+  <td>M.Sc</td>
+  <td>19 May, 2022</td>
+  <td>royueq@gmail.com</td>
+  <td>07085612218</td>
+  <td>4.8 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Olayiwola Martha J.
+  </td>
+  <td>
+   <img class="staff-photo w3-hover-opacity" src="staff/f8.jpeg" alt="logo" width="30px" onclick="onClick(this)"/>
+  </td>
+  <td>ST012</td>
+  <td>Female</td>
+  <td>ART</td>
+  <td>Subject teacher</td>
+  <td>Primary</td>
+  <td>Literature</td>
+  <td>B.Sc</td>
+  <td>16 Jan, 2008</td>
+  <td>jmowuu@gmail.com</td>
+  <td>08077111927</td>
+  <td>4.8 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+    </table>
+    <hr />
+    <div class="w3-margin-bottom"> <b>TOTAL STAFF (40) </b>
+    </div>
+     <b class="w3-margin-top"> DEPARTMENTS (10) </b>:
+   <ul class="department">
+     <li>MOT: Maintenance Operations and Transportation</li>
+     <li>STEM: Science, Technology, Engineering, Mathematics</li>
+     <li>LING: Languages and Linguistics</li>
+     <li>ICT: Information and Communication Technology</li>
+     <li>BUS: Business Services</li>
+     <li>SGR: Sports, Games and Recreation</li>
+     <li>STS: Student Services</li>
+     <li>WES: Welfare Services</li>
+     <li>ARTS: Arts and Literature</li>
+     <li>SSC: Social Sciences</li>
+   </ul>
+  </div>
+  </div>
+  <div class="staff-review">
+   <button class="w3-button w3-green w3-margin-top" onclick="document.getElementById('id02').style.display='block'">
+      Staff rating and review
+  </button>
+   <button class="w3-button w3-red w3-margin-top" onclick="document.getElementById('id01').style.display='block'">
+      Report a staff
+  </button>
+</div>
+
+<!-- rating staff modal -->
+<div class="w3-container w3-margin-top">
+  <div id="id02" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-padding" style="max-width:600px">
+
+ <div class="w3-center"><br>
+ <span onclick="closeModal()" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+      </div>
+
+ <form class="w3-container" action="parent-dashboard.html">
+   <div class="w3-section">
+<p class="w3-center bold">
+ We appreciate each of our staff for their tireless efforts in building our children
+  <br />
+  We hereby encourage you to leave a review on a staff whose work and impacts you've felt!
+  We appreciate your comment. Thank you!
+</p>
+<div class="child-report-staff w3-container">
+ <p> 
+ <label for="staff">*Staff full name
+ </label> <br />
+ <input class="w3-input" type="text" name="staff" id="staff" value="" placeholder="full name of staff" />
+ </p>
+ <p>
+   <label for="dept">*Department/class</label> <br />
+  <input class="w3-input" type="text" name="dept" id="dept" value="" placeholder="dept/class" />
+ </p>
+ <p>
+   <label for="date">*Leave a star rating</label>
+  <div id="star-rating" class="star-rating w3-center">
+   <span onclick="oneStar()" class="oneStar">
+     <i class="fa-solid fa-star"></i>
+   </span>
+   <span onclick="twoStar()" class="twoStar">
+     <i class="fa-solid fa-star"></i>
+   </span> 
+   <span onclick="threeStar()" class="threeStar">
+     <i class="fa-solid fa-star"></i>
+   </span>
+   <span onclick="fourStar()" class="fourStar">
+     <i class="fa-solid fa-star"></i>
+   </span> 
+   <span onclick="fiveStar()" class="fiveStar">
+     <i class="fa-solid fa-star"></i>
+   </span> 
+  </div>
+  </p>
+</div>
+
+ <label for="report"><b>Leave a comment</b></label> <br />
+ <textarea class="w3-block" name="report" id="report" rows="4" cols="40"></textarea>
+   <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Submit</button>
+        </div>
+      </form>
+
+  <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+ <button onclick="closeModal()" type="button" class="w3-button w3-red">Cancel</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- report staff modal -->
+<div class="w3-container w3-margin-top">
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+ <div class="w3-center"><br>
+  <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+      </div>
+
+ <form class="w3-container" action="parent-dashboard.html">
+   <div class="w3-section">
+<p class="w3-center bold">
+  At Castle Royal College, we care about the well-being of your child as well as the protection of their rights!
+  <br />
+  So in case of any noticed problems on how any of our staff might have handled your child, please let us know!
+</p>
+<div class="child-report-staff">
+ <p> 
+ <label for="staff">*Staff to be reported
+ </label>
+ <input type="text" name="staff" id="staff" value="" placeholder="full name of staff" />
+ </p>
+ <p>
+   <label for="dept">*Department/class</label>
+  <input type="text" name="dept" id="dept" value="" placeholder="dept/class" />
+ </p>
+ <p>
+   <label for="date">*Date of issue occurrence</label>
+  <input type="date" name="date" id="date" value="" />
+  </p>
+</div>
+  <p>*Please select nature of harm done to your child:</p>
+<div class="child-report-issues">
+  <div>
+   <input type="radio" id="physical" name="fav_language" value="physical">
+  <label for="physical">Physical abuse</label>
+ </div>
+<div>
+  <input type="radio" id="verbal" name="fav_language" value="verbal">
+<label for="verbal">Verbal abuse</label>
+</div>
+<div>
+  <input type="radio" id="neglect" name="fav_language" value="neglect">
+<label for="neglect">Neglect</label>
+</div>
+
+<div>
+<input type="radio" id="sexual" name="fav_language" value="sexual">
+<label for="sexual">Sexual abuse</label>
+</div>
+<div>
+   <input type="radio" id="grading" name="fav_language" value="grading">
+<label for="grading">Errors in grading</label>
+</div>
+<div>
+ <input type="radio" id="other" name="fav_language" value="exploitation">
+<label for="other">Others</label>
+</div>
+</div>
+
+ <label for="report"><b>Provide a detailed report</b></label> <br />
+ <textarea name="report" id="report" rows="6" cols="40"></textarea>
+   <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Submit</button>
+        </div>
+      </form>
+
+      <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+        <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- staff photo modal --> 
+  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="w3-modal-content w3-animate-zoom">
+    <img id="img01" style="width:100%">
+  </div>
+</div>
+  </div>
+  
+<!-- calendar -->
+<div id="schoolCalendar" class="w3-card w3-margin w3-padding">
+  <h3>School calendar</h3>
+  <hr />
+<div class="calendar">
+  <img src="images/calendar1.png" alt="cal" width="100%"/>
+  <img src="images/calendar2.png" alt="cal" width="100%"/>
+</div>
+<a href="pdf/academic-calendar.pdf" download>
+  <button class="w3-button w3-black w3-margin">
+  Download academic calendar
+</button>
+</a>
+  </div>
+  
+<!-- pta -->
+<div id="pta" class="w3-card w3-margin w3-padding">
+  <h3>Parent-Teacher Association</h3>
+  <hr />
+<div class="pta-details">
+   <h2>ABOUT PTA</h2>
+    <p>
+   The Parent/Teacher Association of Castle Royal College, Lagos, was inaugurated on Saturday, 30th January, 2012 by the former headmaster Mr. Yusu K. Effah. The aim was to bring parents and teachers together for the welfare of the students and the school in general.
+ </p>
+   <hr />
+   <h2>PTA EXECUTIVES</h2>
+  <table class="pta-table" border="0">
+    <th>Name</th>
+    <th>Position</th>
+    <tr>
+      <td>ADEOYE PETER</td>
+      <td>Chairman</td>
+    </tr>
+    <tr>
+      <td>OYEYEMI ESTHER</td>
+      <td>Vice Chairman</td>
+    </tr>
+    <tr>
+      <td>GANA NGOZI</td>
+      <td>Treasurer</td>
+    </tr>
+    <tr>
+      <td>BADMUS OLAWALE</td>
+      <td>Headmaster</td>
+    </tr>
+    <tr>
+      <td>FATAI RASHEED</td>
+      <td>Member</td>
+    </tr>
+    <tr>
+      <td>AKINOLA JANET</td>
+      <td>Member</td>
+    </tr>
+    <tr>
+      <td>AKANBI TAYE</td>
+      <td>Secretary</td>
+    </tr>
+  </table>
+<hr />
+<h2>PTA PROJECTS</h2>
+    <p>
+  <h4>CLINIC</h4>
+   The P. T. A. converted a wooden structure  in the school into a clinic at the cost of ₦ 120, 000 in March 2013 to cater for the welfare of students staff and their dependants. <br />
+Miss Ruqaya Ennin, a Nursing sister was temporarily in charge of the clinic, until in December, 2014 when a full time nurse was appointed and paid by the Government in the person of Miss Florence Mensah. <br />
+
+Each year the P. T. A. gives grant for the running of the clinic. The clinic was rehabilitated at the cost of ₦ 200,000 in 2013. Currently, the nurse in charge of the clinic is Miss Ernestina Mensah.
+<br />
+<h4>CORNMILL</h4>
+The P. T. A. purchased a cornmill on 28th November 2013 at the cost of ₦195,600.00. In addition to the cost of the machine the P. T. A. constructed a structure to house the machine and purchased the necessary fittings for the installation of the machine at a total cost of ₦229,480.00. The total cost of the machine and its installation stood at ₦ 425,080 in 2013. <br />
+The aim for the purchase of the mill was to reduce the overhead cost of feeding students by milling all the corn-related food items in the school. <br />
+
+<h4>FURNITURE</h4>
+In 2017 and 2018, the P. T. A. purchased 172 mono desks at a total cost of ₦894, 400.00 for the school.
+
+<h4>INCENTIVE TO TEACHERS</h4> 
+In order to boost the morale of Teachers, the P. T. A. introduced in 2012, a Free lunch to Teachers. This incentive is still enjoyed by the Teaching as well as non-Teaching staff in the form of Noon snacks. <br />
+Furthermore, the P. T. A. introduced a Revolving fund in the form of a loan scheme to needy members of staff both teaching and non-teaching.
+
+<h4>ACCOMMODATION</h4>
+The P. T. A. supplemented with an amount of ₦748,000.00 for the rehabilitation of the old Dining Hall and converted part into a Living Quarters for some masters. The second phase of the rehabilitation was carried out in 1989 when the P. T. A. spent ₦1,200,000.00 to convert the other part of the building for residence of Two housemistresses.
+ </p>
+<hr />
+<h2>PRESENTATIONS</h2>
+<p>
+ The P. T. A. has made several presentations to long service and dedicated workers, as follows: <br />
+<br />
+i. The Late Mr. M . A. Sam he was presented with a 14" Plasma TV set as a send off at the cost of ₦ 140,000.00 in 2019. Also Mr. K. Asumadu Yeboah was presented with a Gasoline generator at ₦90,000.00. <br /> <br />
+ii. In, 2020, Mr. Yusuf K Effah, the former headmaster of the shool was presented with a 32” Colour T. V. at the cost of ₦110,000.00 as a send off.
+<br /> <br />
+iii. In 2021, the P. T. A. presented to the school a 46” Plasma TV set at the cost of ₦250,000.00 <br /> <br />
+iv. In 2022, the P. T. A. honoured some hardworking and dedicated workers and non-teachers. <br /> <br />
+v. In 2023, the P. T. A. provided the school with a set of Track suits at the cost of ₦360,000.00 and at the same time sponsored the Triangular Games at the cost of ₦400,000.00. <br /> <br />
+In the same year, the P. T. A. purchased three water tanks at the total cost of ₦510,000.00 and an additional cost of ₦440,000.00 for its installation.
+<br /> <br />
+vi. In 2024, the P. T. A. contributed a total of ₦600,000.00 towards the funding of the speech and prize giving day.
+<br /> <br />
+Furthermore, the P. T. a. made presentations to the out-going members of the executive which included the following. <br /> <br />
+
+(a) the former Chairman Alhaj V. A. Essaka who had served as Chairman from 2022, to 2024 was presented with a 60” Colour TV set at the cost of ₦375,000.00 other beneficiaries were: <br /><br />
+(b) Mr. Adams Dawoode a Gas Cooker at ₦120,000.00 <br /><br />
+(c) Mr. J. K. Opoku, Mr. J. E. Opoku, Mr. T. F. Gambrah and Nana Wiredu Frempong Manso were presented with Radio cassettes at a total cost of ₦220,000,00. <br /><br />
+vii. In 1995 the PTA spent ₦1,632,000.00 on the water project for the school. In the same year Library Books worth ₦564, 000.00 were present to the school Library to assist students to improve their reading skills.
+<br /><br />
+To crown it all for 2024, the PTA has purchased a Benz Bus worth ₦19,600,000.00 and presented it to the School on the 4th April, 2024.
+</p>
+</div>
+  </div>
+  
+<!-- counseling -->
+<div id="counseling" class="w3-card w3-margin w3-padding">
+  <h3>Counseling</h3>
+  <hr />
+    <p class="w3-center">
+Balancing the demands of work, managing house responsibilities, schooling, and entertaining children, or facing unexpected hardship can be challenging.  Refer to our team of well-trained personnels for a range of resources, including health support, parent support groups, articles, and webinars.
+ </p>
+   <hr />
+   <div id="appointmentModal" class="w3-card w3-khaki w3-padding w3-center">
+<div class="modal-line-countdown"></div>
+    An appointment slip wil been sent to your mail shortly. Thank you!
+  </div>
+   <div class="counselling-details">
+  <table class="counselling-table" border="0">
+    <tr>
+      <td>General Counselor</td>
+      <td>Dr OLATUNJI BELLO</td>
+      <td>
+        <button onclick="reqAppointment()" class="w3-button w3-indigo w3-round-xxlarge w3-tiny">
+          Request an appointment
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>Deputy Counselor </td>
+      <td>LYDIA OWOEYE</td>
+      <td>
+        <button onclick="reqAppointment()" class="w3-button w3-indigo w3-round-xxlarge w3-tiny">
+          Request an appointment
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>Adolescent Counseling Services</td>
+      <td>Sarah Ani</td>
+      <td>
+        <button onclick="reqAppointment()" class="w3-button w3-indigo w3-round-xxlarge w3-tiny">
+          Request an appointment
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>School nurse</td>
+      <td>Aduke Ayodele</td>
+      <td>
+        <button onclick="reqAppointment()" class="w3-button w3-indigo w3-round-xxlarge w3-tiny">
+          Request an appointment
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>School nurse</td>
+      <td>Mary Ngozi</td>
+      <td>
+        <button onclick="reqAppointment()" class="w3-button w3-indigo w3-round-xxlarge w3-tiny">
+          Request an appointment
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>Wellness coordinator</td>
+      <td>James Dada</td>
+      <td>
+        <button onclick="reqAppointment()" class="w3-button w3-indigo w3-round-xxlarge w3-tiny">
+          Request an appointment
+        </button>
+      </td>
+    </tr>
+  </table>
+   </div>
+  </div>
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- info section -->
+ <section class="info_section layout_padding">
+
+ <div class="container links-container">
+
+  <h4 class="w3-text-blue">
+    <i class="fa-solid fa-thumbtack"></i>
+    Quick links</h4>
+ <ul class="quick-links">
+  <li>
+    <a href="news.html">Latest news</a>
+   </li>
+   <li>
+    <a href="registration.html">Register child</a>
+   </li>
+   <li>
+    <a href="portal-login.html">Student login</a>
+   </li>
+   <li>
+    <a href="portal-login.html">Parent login</a>
+   </li>
+   <li>
+    <a href="portal-login.html">Staff login</a>
+   </li>
+   <li>
+    <a href="our-team.html">Staff, Management & Prefects</a>
+   </li>
+   <li>
+    <a href="contact-us.html">Get in touch</a>
+   </li>
+  </ul>
+    </div>
+    <div class="container">
+    <div class="info_form">
+      <div class="row">
+       <div class="offset-lg-3 col-lg-3">
+          <h5 class="form_heading">
+              Newsletter
+            </h5>
+          </div>
+        <div class="col-md-6">
+          <form action="#">
+              <input type="text" placeholder="Enter Your email">
+              <button>
+                subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_logo">
+            <div>
+       <img src="images/logo2.png" alt="logo" width="20%"/>
+            </div>
+   <p>
+Castle Royal College is located at 1, Olawole Daodu Street, Ifako-Gbagada, PO Box 74441, Victoria Island, Lagos, Nigeria <br />
+  </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_links ">
+            <h5>
+              Contact Us
+            </h5>
+    <p class="pr-0 pr-md-4 pr-lg-5">
+  <span class="contactIcon">
+   <i class="fa-solid fa-phone-volume"></i>
+  </span> 08077890753 <br />
+  <span class="contactIcon">
+   <i class="fa-brands fa-whatsapp"></i>
+  </span> 08189027693 <br />
+  <span class="contactIcon">
+   <i class="fa-brands fa-facebook"></i>
+</span> Castle Royal College Lagos <br />
+  <span class="contactIcon">
+   <i class="fa-brands fa-youtube"></i>
+  </span> Castle Lagos <br />
+  <span class="contactIcon">
+   <i class="fa-solid fa-envelope"></i>
+  </span> castlelagos@gmail.com
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_insta">
+            <h5>
+              INFORMATION
+            </h5>
+      <p class="pr-0 pr-md-4 pr-md-5">
+   Founded in 2007 by Hon and Mrs Adeyemi, Castle Royal College has maintained years of excellent reputation in contemporary education and child nurturing!
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+         <div class="pl-0 pl-lg-5 pl-md-4">
+      <h5> SCHOOL ACCOUNT </h5>
+     <p>
+  All payment is made into the school account details. Verification and receipt are consequently issued. <br />
+  • Account name: Castle Royal College, Lagos <br />
+ • Account number: 0172689352 <br />
+  • Bank name: Zenith Bank
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Castle Royal College, Lagos <br />
+    &copy; 2024 All Rights Reserved <br />
+      Powered By
+      <a href="https://html.design/">Phenomenal Inc.</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script src="js/parent-dashboard.js" type="text/javascript"></script>
+  <script src="js/scroll-to-top.js" type="text/javascript"></script>
+
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  </script>
+</body>
+
+</html>

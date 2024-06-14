@@ -1,0 +1,3016 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- Site Metas -->
+<meta name="keywords" content="castle" />
+<meta name="description" content="primary school site, castle" />
+<meta name="author" content="phenomenal" />
+
+  <title>Castle student dashboard</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- css libraries -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css" />
+<!--Site icons -->
+<script src="https://kit.fontawesome.com/126c863153.js" crossorigin="anonymous"></script>
+<link rel="icon" href="images/logo2.png" type="image/gif" sizes="16x16">
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet" />
+<!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <!-- Custom styles for -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/navbar.css" rel="stylesheet" />
+  <link href="css/student-dashboard.css" rel="stylesheet" />
+  <link href="css/scroll-to-top.css" rel="stylesheet" />
+</head>
+
+<body>
+<div class="hero_area_dashboard">
+    <!-- header section strats -->
+ <top class="top_section">
+	<div class="logo-section">
+	  <img class="logo" src="images/logo2.png" alt="logo">
+   <span class="sch-name">Castle</span>
+	</div>
+<div class="navArea">
+ <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+  	<label for="menu-icon"></label>
+  	<nav class="nav"> 		
+  		<ul class="nav-list">
+  		<li><a href="index.html">Home</a></li>
+  		<li><a href="our-campus.html">Our campus</a></li>
+  		<li><a href="registration.html">Enrol Child</a></li>
+  		<li><a href="our-team.html">Our team</a></li>
+  		<li><a href="portal-login.html" class="active-link">Student dashboard</a></li>
+  		<li><a href="news.html">News & Blog</a></li>
+  		<li><a href="contact-us">Contact us</a></li>
+  		</ul>
+  	</nav>
+</div>
+    </top>
+    <!-- end header section -->
+  </div>
+<button onclick="showSideBar()" class="side-bar-btn">
+  <i class="fa-solid fa-angles-right fa-beat-fade"></i>
+</button>
+<h4 class="heading">Student dashboard</h4>
+ 
+<div class="w3-container grid-layout">
+  <div class="side-bar">
+  <button onclick="closeSideBar()" class="side-bar-btn-close">
+  <i class="fa-solid fa-angles-left fa-beat-fade"></i>
+</button>
+<div class="student-profile">
+  <img class="kid-profile-pic" src="classmates/f1.jpeg" alt="profile pic" />
+  <h5 class="student-name">
+    BADMUS LOLADE
+  </h5>
+</div>
+
+ <ul class="side-menu">
+<li onclick="showOverview()" class="gridItem gridItem-active">
+   <span class="gridIcon">
+<i class="fa-solid fa-user"></i>
+     </span> Overview
+      </li>
+<li onclick="showMyKids()" class="gridItem">
+   <span class="gridIcon">
+<i class="fa-solid fa-circle-info"></i>
+     </span>  My info
+      </li>
+<li onclick="showTimetable()" class="gridItem">
+   <span class="gridIcon">
+<i class="fa-solid fa-calendar-days"></i>
+     </span> Class Timetable
+      </li>
+<li onclick="showCheckResults()" class="gridItem">
+   <span class="gridIcon">
+<i class="fa-solid fa-flag-checkered"></i>
+     </span> Check Results
+      </li>
+<li class="gridItem" onclick="showMyClassmates()">
+   <span class="gridIcon">
+    <i class="fa-solid fa-users"></i>
+     </span> My Classmates
+      </li>
+<li class="gridItem" onclick="showStaffDirectory()">
+   <span class="gridIcon">
+    <i class="fa-solid fa-person-chalkboard"></i>
+     </span> My Teachers
+      </li>
+<li onclick="showPaymentHistory()" class="gridItem">
+   <span class="gridIcon">
+    <i class="fa-solid fa-receipt"></i>
+     </span>  Payment history
+      </li>
+<li class="gridItem" onclick="showCalendar()">
+   <span class="gridIcon">
+<i class="fa-solid fa-calendar-check"></i>
+     </span>  School calendar
+      </li>
+<li class="gridItem" onclick="showCounseling()">
+   <span class="gridIcon">
+  <i class="fa-solid fa-clipboard-question"></i>
+     </span> Counseling
+      </li>
+<li class="gridItem" onclick="showComplaints()">
+   <span class="gridIcon">
+    <i class="fa-solid fa-question-circle"></i>
+     </span> Complaint/suggestion
+      </li>
+<li onclick="document.location='portal-login.html'" class="gridItem">
+   <span class="gridIcon">
+<i class="fa-solid fa-door-open"></i>
+     </span> Logout
+      </li>
+  </ul>
+  </div>
+  <div class="main-site">
+ <!-- my kids -->
+<div id="myKids" class="w3-padding">
+  <h3>My info</h3>
+  <hr />
+ <div class="w3-container kid-details">
+   <img class="kid-image" src="classmates/f1.jpeg" alt="logo" width="30%"/>
+  <table class="kid-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>BADMUS, Lolade</td>
+      </tr>
+       <tr>
+        <td>Gender:</td>
+        <td>Female</td>
+        </tr>
+       <tr>
+        <td>Age:</td>
+        <td>15</td>
+        </tr>
+       <tr>
+        <td>Address:</td>
+        <td>18, Adewale Plaza, Along Crescent Valley, Oyin Estate, Lagos State</td>
+        </tr>
+       <tr>
+        <td>Date of birth:</td>
+        <td>18 June, 2008</td>
+        </tr>
+       <tr>
+        <td>Father:</td>
+        <td>BADMUS Oyetunji</td>
+        </tr>
+       <tr>
+        <td>Mother:</td>
+        <td>BADMUS Eunice</td>
+        </tr>
+       <tr>
+        <td>Class:</td>
+        <td>SS2A</td>
+      </tr>
+      <tr>
+        <td>Department:</td>
+        <td>Science</td>
+      </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A018</td>
+      </tr>
+       <tr>
+        <td>Admission date:</td>
+        <td>21/02/2020</td>
+      </tr>
+      <tr>
+        <td>#Days school opened (this term):</td>
+        <td>56</td>
+      </tr>
+       <tr>
+        <td>#Days attended (this term):</td>
+        <td>52</td>
+      </tr>
+      <tr>
+        <td>Extracurricular activities group(s):</td>
+        <td>Robotics, JET </td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Blue</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>Lesson Moderator </td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>Health Prefect</td>
+      </tr>
+       <tr>
+        <td>Last term exam score:</td>
+        <td>95%</td>
+      </tr>
+      <tr>
+        <td>Record(s) held:</td>
+        <td>First student in class to score A in all subjects</td>
+      </tr>
+       <tr>
+        <td>Achievements:</td>
+        <td>
+  • Prefect Performance Award
+  <small>- 09/04/2024</small>
+  <br />
+  • STEM Project Champion
+  <small>- 23/01/2024</small>
+  <br />
+  • Chess Championship Winner
+  <small>- 17/09/2023</small>
+        </td>
+      </tr>
+      <tr>
+        <td>Class teacher:</td>
+        <td>Mrs. Abosede Olutayo <br />
+        <small>08176891361 | bosedetayo@gmail.com</small>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- payment history -->
+<div id="paymentHistory" class="w3-padding">
+ <div class="session-flex">
+   <h3>Payment history</h3>
+  <div class="dropdown">
+  <button onclick="toggleDropdown()" class="dropbtn">
+   <span id="academicSession">2023/2024</span>
+  <span><i class="fa-solid fa-arrows-rotate"></i></span>
+  </button>
+  <div class="dropdown-content">
+  <button onclick="toggle24()">2023/2024</button>
+  <button onclick="toggle23()">2022/2023</button>
+  <button onclick="toggle22()">2021/2022</button>
+  </div>
+</div>
+ </div> 
+  <hr />
+  <!-- 23/24 session -->
+ <div id="session24" class="payment-section">
+<div class="w3-container w3-padding payment-details">
+ <div class="expenses">
+   <p>
+     <span class="expenses-info">
+       Term
+     </span> <br />
+  <span class="expenses-detail">Third
+     </span>
+   </p>
+   <p>
+     <span class="expenses-info">Due fees</span> <br />
+     <span class="expenses-detail w3-text-red">₦ 23,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total expenses </span> <br />
+     <span class="expenses-detail">₦ 973,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total paid </span> <br />
+     <span class="expenses-detail w3-text-green">₦ 950,000</span>
+   </p>
+ </div>
+<table class="expenses-table" border="0">
+ <tr>
+  <td>Graduation kit</td>
+  <td>₦ 23,000</td>
+<td class="w3-text-red"><strong>Due</strong></td>
+  <td>- - -</td>
+ </tr>
+ <tr>
+  <td>Robotics Exhibition Project</td>
+  <td>₦ 550,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>16/06/2024</td>
+ </tr>
+ <tr>
+  <td>Books & stationeries</td>
+  <td>₦ 50,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>07/05/2024</td>
+ </tr>
+ <tr>
+  <td>Tuition</td>
+  <td>₦ 350,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>03/05/2024</td>
+ </tr>
+    
+    </table>
+  <a href="pdf/badmus-statement-payment.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download Full Payment Breakdown
+  </button>
+ </a>
+  </div>
+  <hr />
+<div class="w3-container w3-padding payment-details">
+ <div class="expenses">
+   <p>
+     <span class="expenses-info">
+       Term
+     </span> <br />
+  <span class="expenses-detail">Second
+     </span>
+   </p>
+   <p>
+     <span class="expenses-info">Due fees</span> <br />
+     <span class="expenses-detail w3-text-green">Balanced</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total expenses </span> <br />
+     <span class="expenses-detail">₦ 1,973,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total paid </span> <br />
+     <span class="expenses-detail w3-text-green">₦ 1,950,000</span>
+   </p>
+ </div>
+<table class="expenses-table" border="0">
+ <tr>
+  <td>Gardening kit</td>
+  <td>₦ 23,000</td>
+<td class="w3-text-red"><strong>Due</strong></td>
+  <td>- - -</td>
+ </tr>
+ <tr>
+  <td>Excursion to Paris</td>
+  <td>₦ 1,550,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>12/03/2024</td>
+ </tr>
+ <tr>
+  <td>Books & stationeries</td>
+  <td>₦ 50,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>07/01/2024</td>
+ </tr>
+ <tr>
+  <td>Tuition</td>
+  <td>₦ 350,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>03/01/2024</td>
+ </tr>
+    
+    </table>
+ <a href="pdf/badmus-statement-payment.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download Full Payment Breakdown
+  </button>
+ </a>
+  </div>
+  <hr />
+<div class="w3-container w3-padding payment-details">
+ <div class="expenses">
+   <p>
+     <span class="expenses-info">
+       Term
+     </span> <br />
+  <span class="expenses-detail">First
+     </span>
+   </p>
+   <p>
+     <span class="expenses-info">Due fees</span> <br />
+     <span class="expenses-detail w3-text-green">Balanced</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total expenses </span> <br />
+     <span class="expenses-detail">₦ 450,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total paid </span> <br />
+     <span class="expenses-detail w3-text-green">₦ 450,000</span>
+   </p>
+ </div>
+<table class="expenses-table" border="0">
+ <tr>
+  <td>Christmas party</td>
+  <td>₦ 20,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>04/12/2023</td>
+ </tr>
+ <tr>
+  <td>School bus</td>
+  <td>₦ 50,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>12/09/2023</td>
+ </tr>
+ <tr>
+  <td>Books & stationeries</td>
+  <td>₦ 30,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>07/09/2023</td>
+ </tr>
+ <tr>
+  <td>Tuition</td>
+  <td>₦ 350,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>31/08/2023</td>
+ </tr>
+    
+    </table>
+  <a href="pdf/badmus-statement-payment.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download Full Payment Breakdown
+  </button>
+ </a>
+  </div>
+  </div>
+  <!-- 22/23 session -->
+ <div id="session23" class="payment-section">
+ <div class="w3-container w3-padding payment-details">
+ <div class="expenses">
+   <p>
+     <span class="expenses-info">
+       Term
+     </span> <br />
+  <span class="expenses-detail">Third
+     </span>
+   </p>
+   <p>
+     <span class="expenses-info">Due fees</span> <br />
+     <span class="expenses-detail w3-text-green">Balanced</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total expenses </span> <br />
+     <span class="expenses-detail">₦ 470,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total paid </span> <br />
+     <span class="expenses-detail w3-text-green">₦ 470,000</span>
+   </p>
+ </div>
+<table class="expenses-table" border="0">
+ <tr>
+  <td>Graduation party</td>
+  <td>₦ 20,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>14/07/2023</td>
+ </tr>
+ <tr>
+  <td>Excursion to OAU Zoo</td>
+  <td>₦ 20,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>25/06/2023</td>
+ </tr>
+ <tr>
+  <td>School bus</td>
+  <td>₦ 50,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>08/05/2023</td>
+ </tr>
+ <tr>
+  <td>Books & stationeries</td>
+  <td>₦ 30,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>03/05/2023</td>
+ </tr>
+ <tr>
+  <td>Tuition</td>
+  <td>₦ 350,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>01/05/2023</td>
+ </tr>
+    
+    </table>
+  <a href="pdf/badmus-statement-payment.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download Full Payment Breakdown
+  </button>
+ </a>
+  </div>
+  <hr />
+<div class="w3-container w3-padding payment-details">
+ <div class="expenses">
+   <p>
+     <span class="expenses-info">
+       Term
+     </span> <br />
+  <span class="expenses-detail">Second
+     </span>
+   </p>
+   <p>
+     <span class="expenses-info">Due fees</span> <br />
+     <span class="expenses-detail w3-text-green">Balanced</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total expenses </span> <br />
+     <span class="expenses-detail">₦ 450,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total paid </span> <br />
+     <span class="expenses-detail w3-text-green">₦ 450,000</span>
+   </p>
+ </div>
+<table class="expenses-table" border="0">
+ <tr>
+  <td>Inter-house sports competition</td>
+  <td>₦ 20,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>14/03/2023</td>
+ </tr>
+ <tr>
+  <td>School bus</td>
+  <td>₦ 50,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>09/01/2023</td>
+ </tr>
+ <tr>
+  <td>Books & stationeries</td>
+  <td>₦ 30,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>04/01/2023</td>
+ </tr>
+ <tr>
+  <td>Tuition</td>
+  <td>₦ 350,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>02/01/2023</td>
+ </tr>
+    
+    </table>
+  <a href="pdf/badmus-statement-payment.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download Full Payment Breakdown
+  </button>
+ </a>
+  </div>
+  <hr />
+ <div class="w3-container w3-padding payment-details">
+ <div class="expenses">
+   <p>
+     <span class="expenses-info">
+       Term
+     </span> <br />
+  <span class="expenses-detail">First
+     </span>
+   </p>
+   <p>
+     <span class="expenses-info">Due fees</span> <br />
+     <span class="expenses-detail w3-text-green">Balanced</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total expenses </span> <br />
+     <span class="expenses-detail">₦ 350,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total paid </span> <br />
+     <span class="expenses-detail w3-text-green">₦ 350,000</span>
+   </p>
+ </div>
+<table class="expenses-table" border="0">
+ <tr>
+  <td>Christmas party</td>
+  <td>₦ 10,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>13/12/2022</td>
+ </tr>
+ <tr>
+  <td>School bus</td>
+  <td>₦ 30,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>18/09/2022</td>
+ </tr>
+ <tr>
+  <td>Books & stationeries</td>
+  <td>₦ 20,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>12/09/2022</td>
+ </tr>
+ <tr>
+  <td>Tuition</td>
+  <td>₦ 290,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>03/09/2023</td>
+ </tr>
+    
+    </table>
+  <a href="pdf/badmus-statement-payment.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download Full Payment Breakdown
+  </button>
+ </a>
+  </div>
+  </div>
+  <!-- 21/22 session -->
+ <div id="session22" class="payment-section">
+ <div class="w3-container w3-padding payment-details">
+ <div class="expenses">
+   <p>
+     <span class="expenses-info">
+       Term
+     </span> <br />
+  <span class="expenses-detail">Third
+     </span>
+   </p>
+   <p>
+     <span class="expenses-info">Due fees</span> <br />
+     <span class="expenses-detail w3-text-green">Balanced</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total expenses </span> <br />
+     <span class="expenses-detail">₦ 300,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total paid </span> <br />
+     <span class="expenses-detail w3-text-green">₦ 340,000</span>
+   </p>
+ </div>
+<table class="expenses-table" border="0">
+ <tr>
+  <td>Graduation party</td>
+  <td>₦ 10,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>18/07/2022</td>
+ </tr>
+ <tr>
+  <td>Excursion to Airport Lagos</td>
+  <td>₦ 15,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>13/06/2022</td>
+ </tr>
+ <tr>
+  <td>School bus</td>
+  <td>₦ 25,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>04/05/2022</td>
+ </tr>
+ <tr>
+  <td>Books & stationeries</td>
+  <td>₦ 20,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>01/05/2022</td>
+ </tr>
+ <tr>
+  <td>Tuition</td>
+  <td>₦ 270,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>18/04/2022</td>
+ </tr>
+    
+    </table>
+  <a href="pdf/badmus-statement-payment.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download Full Payment Breakdown
+  </button>
+ </a>
+  </div>
+  <hr />
+<div class="w3-container w3-padding payment-details">
+ <div class="expenses">
+   <p>
+     <span class="expenses-info">
+       Term
+     </span> <br />
+  <span class="expenses-detail">Second
+     </span>
+   </p>
+   <p>
+     <span class="expenses-info">Due fees</span> <br />
+     <span class="expenses-detail w3-text-green">Balanced</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total expenses </span> <br />
+     <span class="expenses-detail">₦ 330,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total paid </span> <br />
+     <span class="expenses-detail w3-text-green">₦ 370,000</span>
+   </p>
+ </div>
+<table class="expenses-table" border="0">
+ <tr>
+  <td>Inter-house sports competition</td>
+  <td>₦ 20,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>16/03/2022</td>
+ </tr>
+ <tr>
+  <td>School bus</td>
+  <td>₦ 20,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>09/01/2022</td>
+ </tr>
+ <tr>
+  <td>Books & stationeries</td>
+  <td>₦ 20,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>04/01/2022</td>
+ </tr>
+ <tr>
+  <td>Tuition</td>
+  <td>₦ 270,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>03/01/2022</td>
+ </tr>
+    
+    </table>
+ <a href="pdf/badmus-statement-payment.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download Full Payment Breakdown
+  </button>
+ </a>
+  </div>
+  <hr />
+ <div class="w3-container w3-padding payment-details">
+ <div class="expenses">
+   <p>
+     <span class="expenses-info">
+       Term
+     </span> <br />
+  <span class="expenses-detail">First
+     </span>
+   </p>
+   <p>
+     <span class="expenses-info">Due fees</span> <br />
+     <span class="expenses-detail w3-text-green">Balanced</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total expenses </span> <br />
+     <span class="expenses-detail">₦ 300,000</span>
+   </p>
+   <p>
+     <span class="expenses-info">
+       Total paid </span> <br />
+     <span class="expenses-detail w3-text-green">₦ 300,000</span>
+   </p>
+ </div>
+<table class="expenses-table" border="0">
+ <tr>
+  <td>Christmas party</td>
+  <td>₦ 10,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>05/12/2021</td>
+ </tr>
+ <tr>
+  <td>School bus</td>
+  <td>₦ 10,000</td>
+<td class="w3-text-green"><strong>Paid</strong></td>
+  <td>22/09/2021</td>
+ </tr>
+ <tr>
+  <td>Books & stationeries</td>
+  <td>₦ 10,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>12/09/2021</td>
+ </tr>
+ <tr>
+  <td>Tuition</td>
+  <td>₦ 270,000</td>
+  <td class="w3-text-green"><strong>Paid</strong></td>
+  <td>03/09/2021</td>
+ </tr>
+    
+    </table>
+  <a href="pdf/badmus-statement-payment.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download Full Payment Breakdown
+  </button>
+ </a>
+  </div>
+  </div>
+  </div>
+  
+<!-- staff directory -->
+<div id="staffDirectory" class="w3-padding">
+ <div class="staff-flex">
+  <h3>My teachers</h3>
+<div class="search-area">
+  <span class="search-icon">
+    <i class="fa-solid fa-magnifying-glass fa-beat-fade"></i></span>
+  <input id="searchbar" 
+ onkeyup="search_staff()" 
+ type="text" name="search" 
+ placeholder="Search teacher..">
+</div>
+ </div> 
+  <hr />
+ <div id="staffList" class="staff-directory">
+ <div class="w3-container w3-padding staff-list">
+<table class="staff-table" border="0">
+ <th>Staff name</th>
+ <th>Sex</th>
+ <th>Subject</th>
+ <th>Department</th>
+ <th>Qualification</th>
+ <th>Email</th>
+ <th>Phone</th>
+ <th>Avg. rating</th>
+ <tr class="staff-details">
+  <td class="staff-name">Adewale Charles J.
+  </td>
+  <td>Male</td>
+  <td>Mathematics</td>
+  <td>STEM</td>
+  <td>M.Sc</td>
+  <td>adewalecharles@gmail.com</td>
+  <td>08097655418</td>
+  <td>4.3 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Godwin Adeoye
+  </td>
+  <td>Male</td>
+  <td>English Language</td>
+  <td>LING</td>
+  <td>PhD</td>
+  <td>godwin098@gmail.com</td>
+  <td>08091271418</td>
+  <td>4.8 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Folakemi Adigun
+  </td>
+  <td>Female</td>
+  <td>Biology</td>
+  <td>STEM</td>
+  <td>M.Sc</td>
+  <td>kemzy081@gmail.com</td>
+  <td>08012905478</td>
+  <td>4.5 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Mercy Okeke
+  </td>
+  <td>Female</td>
+  <td>Chemistry</td>
+  <td>STEM</td>
+  <td>M.Sc</td>
+  <td>mercyoke083@gmail.com</td>
+  <td>08012855409</td>
+  <td>4.8 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Abiodun Oluwafemi
+  </td>
+  <td>Male</td>
+  <td>Physics</td>
+  <td>STEM</td>
+  <td>PhD</td>
+  <td>phemight09@gmail.com</td>
+  <td>08097650992</td>
+  <td>4.9 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Anita Chukwudi
+  </td>
+  <td>Female</td>
+  <td>Civic Education</td>
+  <td>SSC</td>
+  <td>B.Sc</td>
+  <td>chukwuanita@gmail.com</td>
+  <td>08097609127</td>
+  <td>4.3 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Florence Adeyemi
+  </td>
+  <td>Female</td>
+  <td>Geography</td>
+  <td>STEM</td>
+  <td>PhD</td>
+  <td>flora002@gmail.com</td>
+  <td>08091881268</td>
+  <td>4.9 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Oyesiji Oyedamola
+  </td>
+  <td>Male</td>
+  <td>Music</td>
+  <td>ARTS</td>
+  <td>M.Sc</td>
+  <td>seun81@gmail.com</td>
+  <td>08012115409</td>
+  <td>4.2 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Salewa Obaniyi
+  </td>
+  <td>Female</td>
+  <td>French</td>
+  <td>LING</td>
+  <td>B.Sc</td>
+  <td>shaleybabe@gmail.com</td>
+  <td>08012866712</td>
+  <td>4.4 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+ <tr class="staff-details">
+  <td class="staff-name">Abdulkareem Habeeb
+  </td>
+  <td>Male</td>
+  <td>Yoruba</td>
+  <td>LING</td>
+  <td>PhD</td>
+  <td>habsag@gmail.com</td>
+  <td>08097112852</td>
+  <td>4.9 <i class="fa-solid fa-star"></i>
+  </td>
+ </tr>
+    </table>
+    <hr />
+    <div class="w3-margin-bottom"> <b>ALL TEACHERS FOR SS2 (10) </b>
+    </div>
+  <b class="w3-margin-top"> DEPARTMENTS (10) </b>:
+   <ul class="department">
+     <li>MOT: Maintenance Operations and Transportation</li>
+     <li>STEM: Science, Technology, Engineering, Mathematics</li>
+     <li>LING: Languages and Linguistics</li>
+     <li>ICT: Information and Communication Technology</li>
+     <li>BUS: Business Services</li>
+     <li>SGR: Sports, Games and Recreation</li>
+     <li>STS: Student Services</li>
+     <li>WES: Welfare Services</li>
+     <li>ARTS: Arts and Literature</li>
+     <li>SSC: Social Sciences</li>
+   </ul>
+  </div>
+  </div>
+  <div class="staff-photo">
+    <img class="w3-margin w3-center" src="teachers/ct.jpg" alt="classteacher" width="100%" />
+ <div class="staff-photo-album">
+  <div class="w3-container">
+    <img src="teachers/t1.jpg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container">
+    <img src="teachers/t2.jpg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container">
+    <img src="teachers/t3.jpg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container">
+    <img src="teachers/t4.jpg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container">
+    <img src="teachers/t5.jpg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container">
+    <img src="teachers/t6.jpg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container">
+    <img src="teachers/t7.jpg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container">
+    <img src="teachers/t8.jpg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container">
+    <img src="teachers/t9.jpg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container">
+    <img src="teachers/t10.jpg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+</div>
+<div id="modal01" class="w3-modal w3-margin-top" onclick="this.style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="w3-modal-content w3-animate-zoom">
+    <img id="img01" style="width:100%">
+  </div>
+</div>
+  </div>
+  <hr />
+  <div class="staff-review">
+   <button class="w3-button w3-green w3-margin-top" onclick="document.getElementById('id02').style.display='block'">
+      Teacher rating and review
+  </button>
+   <button class="w3-button w3-red w3-margin-top" onclick="document.getElementById('id01').style.display='block'">
+      Report a teacher
+  </button>
+</div>
+
+<!-- rating staff modal -->
+<div class="w3-container w3-margin-top">
+  <div id="id02" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-padding" style="max-width:600px">
+
+ <div class="w3-center"><br>
+ <span onclick="closeModal()" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+      </div>
+
+ <form class="w3-container" action="student-dashboard.html">
+   <div class="w3-section">
+<p class="w3-center bold">
+ Our teachers work passionately and tirelessly in building students' lives and shaping their dreams!
+  <br />
+Please leave a comment and a rating on a teacher you admire
+</p>
+<div class="child-report-staff w3-container">
+ <p> 
+ <label for="staff">
+   <b>Teacher's full name</b>
+ </label> <br />
+ <input class="w3-input" type="text" name="staff" id="staff" value="" placeholder="full name of teacher" />
+ </p>
+ <p>
+   <label for="date">
+    <b> Leave a star rating </b></label>
+  <div id="star-rating" class="star-rating w3-center">
+   <span onclick="oneStar()" class="oneStar">
+     <i class="fa-solid fa-star"></i>
+   </span>
+   <span onclick="twoStar()" class="twoStar">
+     <i class="fa-solid fa-star"></i>
+   </span> 
+   <span onclick="threeStar()" class="threeStar">
+     <i class="fa-solid fa-star"></i>
+   </span>
+   <span onclick="fourStar()" class="fourStar">
+     <i class="fa-solid fa-star"></i>
+   </span> 
+   <span onclick="fiveStar()" class="fiveStar">
+     <i class="fa-solid fa-star"></i>
+   </span> 
+  </div>
+  </p>
+</div>
+
+ <label for="report"><b>Leave a comment</b></label> <br />
+ <textarea class="w3-block" name="report" id="report" rows="4" cols="40"></textarea>
+   <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Submit</button>
+        </div>
+      </form>
+
+  <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+ <button onclick="closeModal()" type="button" class="w3-button w3-red">Cancel</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- report staff modal -->
+<div class="w3-container w3-margin-top">
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+ <div class="w3-center"><br>
+  <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+      </div>
+
+ <form class="w3-container" action="student-dashboard.html">
+   <div class="w3-section">
+<p class="w3-center bold">
+  We care so much about your well-being as well as the protection of your rights!
+  <br />
+  So in case of any noticed errors/offences on the part of any teacher, please let us know <br />
+  <span class="w3-text-red">
+    **This information is secure. Nobody would know it came from you!
+  </span>
+</p>
+<div class="child-report-staff">
+ <p> 
+ <label for="staff"><b>Teacher to be reported</b>
+ </label> <br />
+ <input type="text" name="staff" id="staff" value="" placeholder="full name of teacher" />
+ </p>
+ <p>
+   <label for="date"><b>Date of issue occurrence</b></label> <br />
+  <input type="date" name="date" id="date" value="" />
+  </p>
+</div>
+
+ <label for="report"><b>Please tell us what happened</b></label> <br />
+ <textarea name="report" id="report" rows="6" cols="40"></textarea>
+   <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Submit</button>
+        </div>
+      </form>
+
+      <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+        <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  
+<!-- my classmates -->
+<div id="myClassmates" class="w3-padding">
+ <div class="staff-flex">
+  <h3>My classmates</h3>
+<div class="search-area">
+  <span class="search-icon">
+    <i class="fa-solid fa-magnifying-glass fa-beat-fade"></i></span>
+  <input id="searchClassmate" 
+ onkeyup="search_classmates()" 
+ type="text" name="search" 
+ placeholder="Search classmate..">
+</div>
+ </div> 
+  <hr />
+  <p class="w3-center">Tap/click on classmate photo to display profile</p>
+  <div class="classmate-avatars">
+ <div class="classmate-profile" onclick="document.getElementById('mate1').style.display='block'">
+ <img src="classmates/f1.jpeg" alt="mate1" width="100%"/>
+<p>Lolade</p>
+  </div>
+<div class="classmate-profile" onclick="document.getElementById('mate2').style.display='block'">
+ <img src="classmates/m1.jpeg" alt="mate1" width="100%"/>
+<p>Francis</p>
+  </div>
+<div class="classmate-profile" onclick="document.getElementById('mate3').style.display='block'">
+ <img src="classmates/m2.jpeg" alt="mate1" width="100%"/>
+<p>Chukwuebuka</p>
+  </div>
+<div class="classmate-profile" onclick="document.getElementById('mate4').style.display='block'">
+ <img src="classmates/f2.jpeg" alt="mate1" width="100%"/>
+<p>Mercy</p>
+  </div>
+<div class="classmate-profile" onclick="document.getElementById('mate5').style.display='block'">
+ <img src="classmates/f3.jpeg" alt="mate1" width="100%"/>
+<p>Ajoke</p>
+  </div>
+<div class="classmate-profile" onclick="document.getElementById('mate6').style.display='block'">
+ <img src="classmates/m3.jpeg" alt="mate1" width="100%"/>
+<p>Ayobami</p>
+  </div>
+ <div class="classmate-profile" onclick="document.getElementById('mate7').style.display='block'">
+ <img src="classmates/f4.jpeg" alt="mate1" width="100%"/>
+<p>Marvelous</p>
+  </div>
+<div class="classmate-profile" onclick="document.getElementById('mate8').style.display='block'">
+ <img src="classmates/f5.jpeg" alt="mate1" width="100%"/>
+<p>Christiana</p>
+  </div>
+<div class="classmate-profile" onclick="document.getElementById('mate9').style.display='block'">
+ <img src="classmates/m4.jpeg" alt="mate1" width="100%"/>
+<p>Simon</p>
+  </div>
+<div class="classmate-profile" onclick="document.getElementById('mate10').style.display='block'">
+ <img src="classmates/f6.jpeg" alt="mate1" width="100%"/>
+<p>Grace</p>
+  </div>
+<div class="classmate-profile" onclick="document.getElementById('mate11').style.display='block'">
+ <img src="classmates/m5.jpeg" alt="mate1" width="100%"/>
+<p>John</p>
+  </div>
+<div class="classmate-profile" onclick="document.getElementById('mate12').style.display='block'">
+ <img src="classmates/f7.jpeg" alt="mate1" width="100%"/>
+<p>Gloria</p>
+  </div>
+<div class="classmate-profile" onclick="document.getElementById('mate13').style.display='block'">
+ <img src="classmates/m6.jpeg" alt="mate1" width="100%"/>
+<p>Gbolahan</p>
+  </div>
+<div class="classmate-profile" onclick="document.getElementById('mate14').style.display='block'">
+ <img src="classmates/m7.jpeg" alt="mate1" width="100%"/>
+<p>Adedotun</p>
+  </div>
+<div class="classmate-profile" onclick="document.getElementById('mate15').style.display='block'">
+ <img src="classmates/f8.jpeg" alt="mate1" width="100%"/>
+<p>Olamide</p>
+  </div>
+<div class="classmate-profile" onclick="document.getElementById('mate16').style.display='block'">
+ <img src="classmates/f9.jpeg" alt="mate1" width="100%"/>
+<p>Boluwatife</p>
+  </div>
+<div class="classmate-profile" onclick="document.getElementById('mate17').style.display='block'">
+ <img src="classmates/f10.jpeg" alt="mate1" width="100%"/>
+<p>Elizabeth</p>
+  </div>
+<div class="classmate-profile" onclick="document.getElementById('mate18').style.display='block'">
+ <img src="classmates/f11.jpeg" alt="mate1" width="100%"/>
+<p>Tolulope</p>
+  </div>
+ 
+</div>
+  <hr />
+   <button class="w3-button w3-black w3-margin-top" onclick="document.getElementById('reportClassmate').style.display='block'">
+      Report a classmate
+  </button>
+
+<!-- classmate modals -->
+<div>
+<div id="mate1" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/f1.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>BADMUS, Lolade</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Female</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>18 June, 2008</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A018</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>Robotics, JET </td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Blue</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>Lesson Moderator </td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>Health Prefect</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>18, Adewale Plaza, Oyin Estate </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate1').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+<div id="mate2" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/m1.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>OLAWALE, Francis</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Male</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>10 June, 2009</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A010</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>Drama, Debating </td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Red</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>Class Monitor </td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>Labour Prefect</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>Okin Close, Lekki </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate2').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+<div id="mate3" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/m2.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>OGU, Chukwuebuka</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Male</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>17 July, 2008</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A009</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>Press </td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Red</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>Ass. Class Monitor </td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>None</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>Maraba, Ikeja </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate3').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+<div id="mate4" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/f2.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>OKARA, Mercy</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Female</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>08 January, 2007</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A001</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>Press</td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Red</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>None </td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>None</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>Agata Street, Lekki </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate4').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+<div id="mate5" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/f3.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>ALOYE, Ajoke</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Female</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>19 April, 2008</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A002</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>JET </td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Green</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>Class Secretary </td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>None</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>Akuo area, Ikotun </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate5').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+<div id="mate6" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/m3.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>OKAKA, Ayobami</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Male</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>18 December, 2009</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A006</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>Agro-allied</td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Red</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>None </td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>None</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>Ori-aje Axis, Lekki </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate6').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+<div id="mate7" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/f4.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>AINA, Marvelous</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Female</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>9 March, 2008</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A007</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>JET </td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Green</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>Social Coordinator </td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>None</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>Akala area, Ikotun </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate7').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+<div id="mate8" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/f5.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>AGBAJE, Christiana</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Female</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>22 August, 2010</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A012</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>Agro-allied </td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Blue</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>Front Row Leader </td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>Punctuality Prefect</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>18, Akinosun Area, Oke-Ayepe </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate8').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+<div id="mate9" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/m4.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>OLAWALE, Simon</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Male</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>19 June, 2009</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A011</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>Drama, Debating </td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Red</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td> Smart Board Guru </td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>Game Prefect</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>Okin Close, Lekki </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate9').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+<div id="mate10" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/f6.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>AJANI, Grace</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Female</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>20 February, 2009</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A019</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>Basketball </td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Green</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>Quote Writer </td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>None</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>Great Mage Avenue, Ikeja </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate10').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+<div id="mate11" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/m5.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>ABA, John</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Male</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>28 September, 2009</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A003</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>Soccer team</td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Yellow</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>Desk Straightener </td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>Timekeeper 2</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>Obinata Street, Ikotun </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate11').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+<div id="mate12" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/f7.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>PHILIP, Gloria</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Female</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>18 April, 2008</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A005</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>Drama </td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Yellow</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>Materials Distributor/Collector </td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>Labour Prefect</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>Akanji Street, Ikotun </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate12').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+<div id="mate13" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/m6.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>FAYEMI, Gbolahan</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Male</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>29 December, 2009</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A017</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>Agro-allied</td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Blue</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>Board Cleaner </td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>Library Perfect</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>Ori-aje Axis, Lekki </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate13').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+<div id="mate14" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/m7.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>BOLANLE, Adedotun</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Male</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>19 May, 2008</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A016</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>JET </td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Green</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>Door Opener </td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>None</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>Akala area, Ikotun </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate14').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+<div id="mate15" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/f8.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>ABAYOMI, Olamide</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Female</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>02 September, 2009</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A015</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>Soccer team</td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Yellow</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>None</td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>Timekeeper 1</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>Obinata Street, Ikotun </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate15').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+<div id="mate16" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/f9.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>AKANDE, Boluwatife</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Female</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>18 April, 2008</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A013</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>Drama </td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Yellow</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>None</td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>None</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>Akanji Street, Ikotun </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate16').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+<div id="mate17" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/f10.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>ROBERT, Elizabeth</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Female</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>24 January, 2009</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A014</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>Agro-allied</td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Blue</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>Info Checker </td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>ECA Perfect</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>Ori-aje Axis, Lekki </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate17').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+<div id="mate18" class="w3-padding w3-modal classmate-card w3-card">
+  <img class="classmate-image" src="classmates/f11.jpeg" alt="logo" width="30%"/>
+  <table class="classmate-table" border="0">
+      <tr>
+        <td>Name:</td>
+        <td>PATRICK, Tolulope</td>
+      </tr>
+       <tr>
+        <td>Sex:</td>
+        <td>Female</td>
+        </tr>
+       <tr>
+        <td>Date of Birth:</td>
+        <td>19 June, 2008</td>
+        </tr>
+      <tr>
+        <td>Student ID:</td>
+        <td>CH2A004</td>
+      </tr>
+      <tr>
+        <td>ECA group(s):</td>
+        <td>JET </td>
+      </tr>
+       <tr>
+        <td>Sport house:</td>
+        <td>Green</td>
+      </tr>
+      <tr>
+        <td>Class post:</td>
+        <td>Paper Returner </td>
+      </tr>
+       <tr>
+        <td>School post:</td>
+        <td>Welfare Prefect</td>
+      </tr>
+       <tr>
+        <td>Address:</td>
+        <td>Akala area, Ikotun </td>
+        </tr>
+    </table>
+    <button onclick="document.getElementById('mate18').style.display='none'" class="w3-button w3-red w3-margin">Close</button>
+  </div>
+</div>
+  
+<!-- report classmate modal -->
+<div class="w3-container w3-margin-top">
+  <div id="reportClassmate" class="w3-modal w3-card w3-margin-top">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+ <div class="w3-center"><br>
+  <span onclick="document.getElementById('reportClassmate').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+      </div>
+
+ <form class="w3-container" action="student-dashboard.html">
+   <div class="w3-section">
+<p class="w3-center bold">
+  It is best to not take judgment into your own hands
+  <br />
+  So in case any of your mates offended you in whatever way, we encourage you to report to your class teacher <br />
+</p>
+<div class="child-report-staff">
+ <p> 
+ <label for="staff">
+   <b>Classmate to be reported</b>
+ </label> <br />
+ <input type="text" name="classmate" id="classmate" value="" placeholder="full name of classmate" required/>
+ </p>
+ <p>
+   <label for="date"><b>Date of issue occurrence</b></label> <br />
+  <input type="date" name="date" id="date" value="" required/>
+  </p>
+</div>
+
+<label for="report"><b>Please tell us what happened</b></label> <br />
+ <textarea name="report" id="reportField" rows="6" cols="30" required></textarea>
+   <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Submit</button>
+        </div>
+      </form>
+
+      <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+        <button onclick="document.getElementById('reportClassmate').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+
+<!-- calendar -->
+<div id="schoolCalendar" class="w3-padding">
+  <h3>Academic calendar</h3>
+  <hr />
+<div class="calendar">
+  <img src="images/calendar1.png" alt="cal" width="100%"/>
+  <img src="images/calendar2.png" alt="cal" width="100%"/>
+</div>
+<a href="pdf/academic-calendar.pdf" download>
+     <button class="w3-button w3-black w3-margin">
+      Download academic calendar
+  </button>
+ </a>
+  </div>
+  
+<!-- overview -->
+<div id="overview" class="w3-padding">
+  <h3><span id="greet"></span> Lolade..</h3>
+  <hr />
+<h2>Overview</h2>
+<small>
+    <span id="showDate"></span>
+   • <span id="showTime"></span>
+  </small>
+  <div class="info-overview">
+    <div class="w3-card info-card w3-margin">
+     <p class="info-icon">
+     <i class="fa-solid fa-user"></i>
+     </p>
+     <p class="info-detail">
+     <span class="w3-text-gray info-text">Class & ID</span> <br />
+    <span class="info-figure">SS2A ~ CH2A018</span>
+    </p>
+</div>
+    <div class="w3-card w3-margin info-card">
+    <p class="info-icon">
+    <i class="fa-solid fa-book"></i>
+  </p>
+    <p class="info-detail">
+    <span class="w3-text-gray info-text">Department</span> <br />
+    <span class="info-figure">Science</span>
+  </p>
+</div>
+    <div onclick="document.location='#notifications'" class="w3-card info-card w3-margin">
+  <p class="info-icon">
+    <i class="fa-solid fa-bell"></i>
+  </p>
+  <p class="info-detail">
+    <span class="w3-text-gray info-text">Notifications</span> <br />
+    <span class="info-figure">5</span>
+  </p>
+</div>
+    <div onclick="document.location='#assignments'" class="w3-card w3-margin info-card">
+  <p class="info-icon">
+    <i class="fa-solid fa-book-open-reader"></i>
+  </p>
+  <p class="info-detail">
+    <span class="w3-text-gray info-text">Assignments</span> <br />
+    <span class="info-figure">3</span>
+  </p>
+</div>
+    <div onclick="document.location='#events'" class="w3-card w3-margin info-card">
+  <p class="info-icon">
+    <i class="fa-solid fa-calendar-days"></i>
+  </p>
+  <p class="info-detail">
+    <span class="w3-text-gray info-text">Events</span> <br />
+    <span class="info-figure">2</span>
+  </p>
+</div>
+    <div class="w3-card w3-margin info-card">
+  <p class="info-icon">
+    <i class="fa-solid fa-percent"></i>
+  </p>
+  <p class="info-detail">
+    <span class="w3-text-gray info-text">Attendance</span> <br />
+    <span class="info-figure">96%</span>
+  </p>
+</div>
+  </div>
+<hr />
+<h2>Today's lesson schedule</h2>
+<div id="lessonSchedule">
+  <table class="timetable" border="0">
+  <th>Period</th>
+  <th>Subject</th>
+  <th>Time</th>
+  <tr>
+    <td>1</td>
+    <td>Mathematics</td>
+    <td>8:00am - 8:40am</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Physics</td>
+    <td>8:40am - 9:20am</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>English Language</td>
+    <td>9:20am - 10:00am</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Biology</td>
+    <td>10:00am - 10:40am</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Civic Edu</td>
+    <td>10:40am - 11:20am</td>
+  </tr>
+  <tr>
+    <td>--</td>
+    <td>LUNCH -- BREAK</td>
+    <td>11:20am - 12:00pm</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Geography</td>
+    <td>12:00pm - 12:40pm</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Yoruba</td>
+    <td>12:40pm - 1:20pm</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>French</td>
+    <td>1:20pm - 2:00pm</td>
+  </tr>
+  <tr>
+    <td>--</td>
+    <td>LESSON BREAK</td>
+    <td>2:00pm - 2:30pm</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Mathematics</td>
+    <td>2:30pm - 3:00pm</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>English Language</td>
+    <td>3:00pm - 3:30pm</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Physics Practical</td>
+    <td>3:30pm - 4:00pm</td>
+  </tr>
+</table>
+</div>
+<hr />
+<div class="progress-details">
+   <h2>Your progress</h2>
+<div class="table-chart">
+   <div id="column-example-15">
+    <div class="chart-numbers">
+      <span>100</span>
+      <span>80</span>
+      <span>60</span>
+      <span>40</span>
+      <span>20</span>
+      <span>0</span>
+    </div>
+  <table class="charts-css column show-labels multiple show-primary-axis show-data-axes datasets-spacing-4 show-5-secondary-axes">
+  <caption> Column Example #15 </caption>
+ <thead>
+  <tr>
+    <th scope="col"> Year </th> 
+    <th scope="col"> Progress 1</th> 
+    <th scope="col"> Progress 2</th>
+    <th scope="col"> Progress 3</th> 
+  </tr>
+ </thead> 
+ <tbody>
+  <tr>
+    <th scope="row"> Mathematics </th> 
+    <td style="--size: 0.65; background-color:#0089ff"></td> 
+    <td style="--size: 0.72; background-color:#ffb300"></td> 
+    <td style="--size: 0.95; background-color:#00ff7c"></td> 
+  </tr> 
+  <tr>
+    <th scope="row"> English </th> 
+    <td style="--size: 0.71; background-color:#0089ff"></td> 
+    <td style="--size: 0.88; background-color:#ffb300"></td> 
+    <td style="--size: 0.80; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Biology </th> 
+    <td style="--size: 0.67; background-color:#0089ff"></td> 
+    <td style="--size: 0.59; background-color:#ffb300"></td> 
+    <td style="--size: 0.62; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Physics </th> 
+    <td style="--size: 0.88; background-color:#0089ff"></td> 
+    <td style="--size: 0.89; background-color:#ffb300"></td> 
+    <td style="--size: 0.85; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Chemistry </th> 
+    <td style="--size: 0.77; background-color:#0089ff"></td> 
+    <td style="--size: 0.67; background-color:#ffb300"></td> 
+    <td style="--size: 0.98; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Geography </th> 
+    <td style="--size: 0.55; background-color:#0089ff"></td> 
+    <td style="--size: 0.65; background-color:#ffb300"></td> 
+    <td style="--size: 0.48; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Marketing </th> 
+    <td style="--size: 0.68; background-color:#0089ff"></td> 
+    <td style="--size: 0.78; background-color:#ffb300"></td> 
+    <td style="--size: 0.85; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Yoruba </th> 
+    <td style="--size: 0.58; background-color:#0089ff"></td> 
+    <td style="--size: 0.78; background-color:#ffb300"></td> 
+    <td style="--size: 0.89; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Civic </th> 
+    <td style="--size: 0.48; background-color:#0089ff"></td> 
+    <td style="--size: 0.59; background-color:#ffb300"></td> 
+    <td style="--size: 0.55; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> French </th> 
+    <td style="--size: 0.85; background-color:#0089ff"></td> 
+    <td style="--size: 0.92; background-color:#ffb300"></td> 
+    <td style="--size: 0.97; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Music </th> 
+    <td style="--size: 0.73; background-color:#0089ff"></td> 
+    <td style="--size: 0.76; background-color:#ffb300"></td> 
+    <td style="--size: 0.82; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Agric Sci </th> 
+    <td style="--size: 0.4; background-color:#0089ff"></td> 
+    <td style="--size: 0.5; background-color:#ffb300"></td> 
+    <td style="--size: 0.55; background-color:#00ff7c"></td>
+   </tr>
+   </tbody>
+   </table>
+   </div>
+</div>
+ <div class="chart-legend w3-margin">
+     <ul class="current-term">
+       <li>Current term</li>
+     </ul>
+     <ul class="last-term">
+       <li>last term term</li>
+     </ul>
+     <ul class="two-terms-ago">
+       <li>two terms ago</li>
+     </ul>
+   </div>
+   </div>
+   <hr />
+ <h2 id="notifications">Notifications</h2>
+ <p>
+   From the Class teacher, Mrs Abosede Olutayo...
+ </p>
+ <ul class="notifications">
+   <li>All students to update their NIN on the school portal</li>
+   <li>You must attend science laboratories with their lab coats</li>
+   <li>Ogunsakin Olaniyi will have his birthday this Friday. Let's celebrate him!</li>
+   <li>Mind how you treat the junior students</li>
+   <li>Inter-class football competition! Let's prepare and support our class for victory!</li>
+ </ul>
+<hr />
+<h2 id="assignments">Assignments</h2>
+  <table class="assignment-table" border="0">
+    <th>Subject</th>
+    <th>Submission date</th>
+    <th>Submission time</th>
+    <tr>
+      <td>Mathematics</td>
+      <td>15 July, 2024</td>
+      <td>7:45am</td>
+    </tr>
+    <tr>
+      <td>Physics</td>
+      <td>18 July, 2024</td>
+      <td>8:30am</td>
+    </tr>
+    <tr>
+      <td>Civic Edu.</td>
+      <td>18 July, 2024</td>
+      <td>11:20am</td>
+    </tr>
+  </table>
+<hr />
+<h2 id="events">Events</h2>
+<table class="event-table" border="0">
+    <th>Events today</th>
+    <th>Time</th>
+    <tr>
+      <td>Press club meeting</td>
+      <td>12:00pm</td>
+    </tr>
+    <tr>
+      <td>Drama rehearsal</td>
+      <td>1:30pm</td>
+    </tr>
+  </table>
+  </div>
+
+<!-- timetable -->
+<div id="timetable" class="w3-padding">
+  <h3>Timetable</h3>
+  <hr />
+    <h2 class="w3-center">
+SS2A APPROVED CLASS TIMETABLE
+ </h2>
+   <hr />
+   <div class="timetable-details">
+<img class="timetable" src="images/timetable.png" alt="timetable" width="100%"/>
+   </div>
+  <a href="pdf/timetable.pdf" download>
+     <button class="w3-button w3-black w3-margin-top">
+      Download
+  </button>
+ </a>
+  </div>
+  
+<!-- counseling -->
+<div id="counseling" class="w3-padding">
+  <h3>Counseling</h3>
+  <hr />
+    <p class="w3-center">
+We understand the uneasiness of academic life and particularly the challenges faced by adolescents. Our trained personnels are available for you. Feel free to reach out to them!
+ </p>
+   <hr />
+   <div id="appointmentModal" class="w3-card w3-khaki w3-padding w3-center">
+<div class="modal-line-countdown"></div>
+    An appointment slip will been sent to your mail shortly. Thank you!
+  </div>
+   <div class="counselling-details">
+  <table class="counselling-table" border="0">
+    <tr>
+      <td>General Counselor</td>
+      <td>OLATUNJI BELLO</td>
+      <td>
+        <button onclick="reqAppointment()" class="w3-button w3-indigo w3-round-xxlarge w3-tiny">
+          Request an appointment
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>Deputy Counselor </td>
+      <td>LYDIA OWOEYE</td>
+      <td>
+        <button onclick="reqAppointment()" class="w3-button w3-indigo w3-round-xxlarge w3-tiny">
+          Request an appointment
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>Adolescent Counseling Services</td>
+      <td>SARAH ANI</td>
+      <td>
+        <button onclick="reqAppointment()" class="w3-button w3-indigo w3-round-xxlarge w3-tiny">
+          Request an appointment
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>School nurse</td>
+      <td>ADUKE AYODELE</td>
+      <td>
+        <button onclick="reqAppointment()" class="w3-button w3-indigo w3-round-xxlarge w3-tiny">
+          Request an appointment
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>School nurse</td>
+      <td>MARY NGOZI</td>
+      <td>
+        <button onclick="reqAppointment()" class="w3-button w3-indigo w3-round-xxlarge w3-tiny">
+          Request an appointment
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>Wellness coordinator</td>
+      <td>JAMES DADA</td>
+      <td>
+        <button onclick="reqAppointment()" class="w3-button w3-indigo w3-round-xxlarge w3-tiny">
+          Request an appointment
+        </button>
+      </td>
+    </tr>
+  </table>
+   </div>
+   <hr />
+  </div>
+  
+<!-- check results -->
+<div id="checkResults" class="w3-padding">
+ <div class="session-flex">
+   <h3>Check results</h3>
+  <div class="dropdown">
+  <button onclick="toggleDropdown2()" class="dropbtn">
+   <span>SWITCH CLASS
+   </span>
+  <span><i class="fa-solid fa-arrows-rotate"></i></span>
+  </button>
+  <div class="dropdown-content2">
+  <button onclick="toggleSS2()">SS2</button>
+  <button onclick="toggleSS1()">SS1
+  </button>
+  </div>
+</div>
+ </div> 
+  
+  <!-- SS2 class -->
+ <div id="ss2">
+<div class="row justify-content-center">
+  <div class="col-11 col-sm-10 col-md-10 col-lg-11 col-xl-7 text-center p-0 mt-3 mb-5">
+<div class="card px-0 pt-4 pb-0 mt-3 mb-5">
+ <div class="third-term w3-card">
+  <h3>Third term results SS2</h3>
+ <div class="slider">
+  <div class="slides">
+    <div id="slide-301">
+      <h4>CA Test Report</h4>
+      <img src="images/test03.jpg" alt="test" width="60%"/>
+    </div>
+    <div id="slide-302">
+      <h4>Examination Report Card</h4>
+      <img src="images/exam23.png" alt="test" width="100%"/>
+    </div>
+  </div>
+   <a href="#slide-301">1</a>
+  <a href="#slide-302">2</a>
+</div>
+<a href="pdf/badmus-results-2024.pdf" download>
+     <button class="w3-button w3-black w3-margin">
+      Download results
+  </button>
+ </a>
+  </div>
+  <hr />
+  <div class="second-term w3-card">
+  <h3>Second term results SS2</h3>
+<div class="slider">
+  <div class="slides">
+    <div id="slide-201">
+      <h4>CA Test Report</h4>
+      <img src="images/test02.jpg" alt="test" width="60%"/>
+    </div>
+    <div id="slide-202">
+      <h4>Examination Report Card</h4>
+      <img src="images/exam22.png" alt="test" width="100%"/>
+    </div>
+  </div>
+   <a href="#slide-201">1</a>
+  <a href="#slide-202">2</a>
+</div>
+<a href="pdf/badmus-results-2024.pdf" download>
+     <button class="w3-button w3-black w3-margin">
+      Download results
+  </button>
+ </a>
+  </div>
+<hr /> 
+<div class="first-term w3-card">
+  <h3>First term results SS2</h3>
+<div class="slider">
+  <div class="slides">
+    <div id="slide-101">
+      <h4>CA Test Report</h4>
+      <img src="images/test01.jpg" alt="test" width="60%"/>
+    </div>
+    <div id="slide-102">
+      <h4>Examination Report Card</h4>
+      <img src="images/exam21.png" alt="test" width="100%"/>
+    </div>
+  </div>
+   <a href="#slide-101">1</a>
+  <a href="#slide-102">2</a>
+</div>
+<a href="pdf/badmus-results-2024.pdf" download>
+     <button class="w3-button w3-black w3-margin">
+      Download results
+  </button>
+ </a>
+  </div>
+            </div>
+        </div>
+    </div>
+<div class="progress-details">
+   <h3>Progress chart SS2</h3>
+<div class="table-chart">
+   <div id="column-example-15">
+    <div class="chart-numbers">
+      <span>100</span>
+      <span>80</span>
+      <span>60</span>
+      <span>40</span>
+      <span>20</span>
+      <span>0</span>
+    </div>
+  <table class="charts-css column show-labels multiple show-primary-axis show-data-axes datasets-spacing-4 show-5-secondary-axes">
+  <caption> Column Example #15 </caption>
+ <thead>
+  <tr>
+    <th scope="col"> Year </th> 
+    <th scope="col"> Progress 1</th> 
+    <th scope="col"> Progress 2</th>
+    <th scope="col"> Progress 3</th> 
+  </tr>
+ </thead> 
+ <tbody>
+  <tr>
+    <th scope="row"> Mathematics </th> 
+    <td style="--size: 0.65; background-color:#0089ff"></td> 
+    <td style="--size: 0.72; background-color:#ffb300"></td> 
+    <td style="--size: 0.95; background-color:#00ff7c"></td> 
+  </tr> 
+  <tr>
+    <th scope="row"> English </th> 
+    <td style="--size: 0.71; background-color:#0089ff"></td> 
+    <td style="--size: 0.88; background-color:#ffb300"></td> 
+    <td style="--size: 0.80; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Biology </th> 
+    <td style="--size: 0.67; background-color:#0089ff"></td> 
+    <td style="--size: 0.59; background-color:#ffb300"></td> 
+    <td style="--size: 0.62; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Physics </th> 
+    <td style="--size: 0.88; background-color:#0089ff"></td> 
+    <td style="--size: 0.89; background-color:#ffb300"></td> 
+    <td style="--size: 0.85; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Chemistry </th> 
+    <td style="--size: 0.77; background-color:#0089ff"></td> 
+    <td style="--size: 0.67; background-color:#ffb300"></td> 
+    <td style="--size: 0.98; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Geography </th> 
+    <td style="--size: 0.55; background-color:#0089ff"></td> 
+    <td style="--size: 0.65; background-color:#ffb300"></td> 
+    <td style="--size: 0.48; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Marketing </th> 
+    <td style="--size: 0.68; background-color:#0089ff"></td> 
+    <td style="--size: 0.78; background-color:#ffb300"></td> 
+    <td style="--size: 0.85; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Yoruba </th> 
+    <td style="--size: 0.58; background-color:#0089ff"></td> 
+    <td style="--size: 0.78; background-color:#ffb300"></td> 
+    <td style="--size: 0.89; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Civic </th> 
+    <td style="--size: 0.48; background-color:#0089ff"></td> 
+    <td style="--size: 0.59; background-color:#ffb300"></td> 
+    <td style="--size: 0.55; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> French </th> 
+    <td style="--size: 0.85; background-color:#0089ff"></td> 
+    <td style="--size: 0.92; background-color:#ffb300"></td> 
+    <td style="--size: 0.97; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Music </th> 
+    <td style="--size: 0.73; background-color:#0089ff"></td> 
+    <td style="--size: 0.76; background-color:#ffb300"></td> 
+    <td style="--size: 0.82; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Agric Sci </th> 
+    <td style="--size: 0.4; background-color:#0089ff"></td> 
+    <td style="--size: 0.5; background-color:#ffb300"></td> 
+    <td style="--size: 0.55; background-color:#00ff7c"></td>
+   </tr>
+   </tbody>
+   </table>
+   </div>
+</div>
+ <div class="chart-legend w3-margin">
+     <ul class="current-term">
+       <li>Third term</li>
+     </ul>
+     <ul class="last-term">
+       <li>Second term</li>
+     </ul>
+     <ul class="two-terms-ago">
+       <li>First term</li>
+     </ul>
+   </div>
+   </div>
+  </div>
+  
+  <!-- SS1 -->
+ <div id="ss1">
+<div class="row justify-content-center">
+  <div class="col-11 col-sm-10 col-md-10 col-lg-11 col-xl-7 text-center p-0 mt-3 mb-5">
+ <div class="card px-0 pt-4 pb-0 mt-3 mb-5">
+ <div class="third-term w3-card">
+  <h3>Third term results SS1</h3>
+ <div class="slider">
+  <div class="slides">
+    <div id="sslide-301">
+      <h4>CA Test Report</h4>
+      <img src="images/test003.png" alt="test" width="60%"/>
+    </div>
+    <div id="sslide-302">
+      <h4>Examination Report Card</h4>
+      <img src="images/exam13.png" alt="test" width="100%"/>
+    </div>
+  </div>
+   <a href="#sslide-301">1</a>
+  <a href="#sslide-302">2</a>
+</div>
+<a href="pdf/badmus-results-2023.pdf" download>
+     <button class="w3-button w3-black w3-margin">
+      Download results
+  </button>
+ </a>
+  </div>
+  <hr />
+  <div class="second-term w3-card">
+  <h3>Second term results SS1</h3>
+<div class="slider">
+  <div class="slides">
+    <div id="sslide-201">
+      <h4>CA Test Report</h4>
+      <img src="images/test002.png" alt="test" width="60%"/>
+    </div>
+    <div id="sslide-202">
+      <h4>Examination Report Card</h4>
+      <img src="images/exam12.png" alt="test" width="100%"/>
+    </div>
+  </div>
+   <a href="#sslide-201">1</a>
+  <a href="#sslide-202">2</a>
+</div>
+<a href="pdf/badmus-results-2023.pdf" download>
+     <button class="w3-button w3-black w3-margin">
+      Download results
+  </button>
+ </a>
+  </div>
+<hr /> 
+<div class="first-term w3-card">
+  <h3>First term results SS1</h3>
+<div class="slider">
+  <div class="slides">
+    <div id="sslide-101">
+      <h4>CA Test Report</h4>
+      <img src="images/test001.png" alt="test" width="60%"/>
+    </div>
+    <div id="sslide-102">
+      <h4>Examination Report Card</h4>
+      <img src="images/exam11.png" alt="test" width="100%"/>
+    </div>
+  </div>
+   <a href="#sslide-101">1</a>
+  <a href="#sslide-102">2</a>
+</div>
+<a href="pdf/badmus-results-2023.pdf" download>
+     <button class="w3-button w3-black w3-margin">
+      Download results
+  </button>
+ </a>
+  </div>
+            </div>
+        </div>
+    </div>
+<div class="progress-details">
+   <h3>Progress chart SS1</h3>
+<div class="table-chart">
+   <div id="column-example-15">
+    <div class="chart-numbers">
+      <span>100</span>
+      <span>80</span>
+      <span>60</span>
+      <span>40</span>
+      <span>20</span>
+      <span>0</span>
+    </div>
+  <table class="charts-css column show-labels multiple show-primary-axis show-data-axes datasets-spacing-4 show-5-secondary-axes">
+  <caption> Column Example #15 </caption>
+ <thead>
+  <tr>
+    <th scope="col"> Year </th> 
+    <th scope="col"> Progress 1</th> 
+    <th scope="col"> Progress 2</th>
+    <th scope="col"> Progress 3</th> 
+  </tr>
+ </thead> 
+ <tbody>
+  <tr>
+    <th scope="row"> Mathematics </th> 
+    <td style="--size: 0.52; background-color:#0089ff"></td> 
+    <td style="--size: 0.62; background-color:#ffb300"></td> 
+    <td style="--size: 0.75; background-color:#00ff7c"></td> 
+  </tr> 
+  <tr>
+    <th scope="row"> English </th> 
+    <td style="--size: 0.62; background-color:#0089ff"></td> 
+    <td style="--size: 0.58; background-color:#ffb300"></td> 
+    <td style="--size: 0.60; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Biology </th> 
+    <td style="--size: 0.47; background-color:#0089ff"></td> 
+    <td style="--size: 0.52; background-color:#ffb300"></td> 
+    <td style="--size: 0.71; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Physics </th> 
+    <td style="--size: 0.68; background-color:#0089ff"></td> 
+    <td style="--size: 0.79; background-color:#ffb300"></td> 
+    <td style="--size: 0.85; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Chemistry </th> 
+    <td style="--size: 0.57; background-color:#0089ff"></td> 
+    <td style="--size: 0.47; background-color:#ffb300"></td> 
+    <td style="--size: 0.78; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Geography </th> 
+    <td style="--size: 0.75; background-color:#0089ff"></td> 
+    <td style="--size: 0.45; background-color:#ffb300"></td> 
+    <td style="--size: 0.38; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Marketing </th> 
+    <td style="--size: 0.68; background-color:#0089ff"></td> 
+    <td style="--size: 0.58; background-color:#ffb300"></td> 
+    <td style="--size: 0.75; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Yoruba </th> 
+    <td style="--size: 0.98; background-color:#0089ff"></td> 
+    <td style="--size: 0.88; background-color:#ffb300"></td> 
+    <td style="--size: 0.99; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Civic </th> 
+    <td style="--size: 0.48; background-color:#0089ff"></td> 
+    <td style="--size: 0.59; background-color:#ffb300"></td> 
+    <td style="--size: 0.66; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> French </th> 
+    <td style="--size: 0.98; background-color:#0089ff"></td> 
+    <td style="--size: 0.92; background-color:#ffb300"></td> 
+    <td style="--size: 0.97; background-color:#00ff7c"></td>
+  </tr> 
+  <tr>
+    <th scope="row"> Music </th> 
+    <td style="--size: 0.69; background-color:#0089ff"></td> 
+    <td style="--size: 0.86; background-color:#ffb300"></td> 
+    <td style="--size: 0.89; background-color:#00ff7c"></td>
+   </tr>
+  <tr>
+    <th scope="row"> Agric Sci </th> 
+    <td style="--size: 0.56; background-color:#0089ff"></td> 
+    <td style="--size: 0.74; background-color:#ffb300"></td> 
+    <td style="--size: 0.85; background-color:#00ff7c"></td>
+   </tr>
+   </tbody>
+   </table>
+   </div>
+</div>
+ <div class="chart-legend w3-margin">
+     <ul class="current-term">
+       <li>Third term</li>
+     </ul>
+     <ul class="last-term">
+       <li>Second term</li>
+     </ul>
+     <ul class="two-terms-ago">
+       <li>First term</li>
+     </ul>
+   </div>
+   </div>
+  </div>
+
+  </div>
+  
+<!-- complaints/suggestions -->
+<div id="complaints" class="w3-padding w3-center">
+  <h3>Complaints/suggestions</h3>
+  <hr />
+    <p>
+We'd like to know if you have any issues with our school, and we'd love to hear your opinion as to how we could improve our great school
+ </p>
+   <div id="reportModal" class="w3-card w3-khaki w3-padding w3-center">
+  <span id="response"> </span>  
+  </div>
+   
+ <textarea id="reportField" rows="8" cols="40"></textarea>
+<strong>
+ <p> We value your privacy. Would you like to reveal your identity concerning this report? </p>
+</strong>
+ <input type="radio" name="revealID" id="revealID" /> 
+  <label for="revealID">YES, reveal my identity</label>
+ <br />
+ <input type="radio" name="revealID" id="noID" />
+  <label for="noID">NO, I prefer to be anonymous</label> <br />
+  <button onclick="submitReport()" class="w3-button w3-black w3-margin" type="submit">
+    SUBMIT</button>
+   <hr />
+  </div>
+ 
+  </div>
+      </div>
+      
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- info section -->
+ <section class="info_section layout_padding">
+ <div class="container links-container">
+  <h4 class="w3-text-blue">
+    <i class="fa-solid fa-thumbtack"></i>
+    Quick links</h4>
+ <ul class="quick-links">
+  <li>
+    <a href="news.html">Latest news</a>
+   </li>
+   <li>
+    <a href="registration.html">Register child</a>
+   </li>
+   <li>
+    <a href="portal-login.html">Student login</a>
+   </li>
+   <li>
+    <a href="portal-login.html">Parent login</a>
+   </li>
+   <li>
+    <a href="portal-login.html">Staff login</a>
+   </li>
+   <li>
+    <a href="our-team.html">Staff, Management & Prefects</a>
+   </li>
+   <li>
+    <a href="contact-us.html">Get in touch</a>
+   </li>
+  </ul>
+    </div>
+    <div class="container">
+    <div class="info_form">
+      <div class="row">
+       <div class="offset-lg-3 col-lg-3">
+          <h5 class="form_heading">
+              Newsletter
+            </h5>
+          </div>
+        <div class="col-md-6">
+          <form action="#">
+              <input type="text" placeholder="Enter Your email">
+              <button>
+                subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_logo">
+            <div>
+       <img src="images/logo2.png" alt="logo" width="20%"/>
+            </div>
+   <p>
+Castle Royal College is located at 1, Olawole Daodu Street, Ifako-Gbagada, PO Box 74441, Victoria Island, Lagos, Nigeria <br />
+  </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_links ">
+            <h5>
+              Contact Us
+            </h5>
+    <p class="pr-0 pr-md-4 pr-lg-5">
+  <span class="contactIcon">
+   <i class="fa-solid fa-phone-volume"></i>
+  </span> 08077890753 <br />
+  <span class="contactIcon">
+   <i class="fa-brands fa-whatsapp"></i>
+  </span> 08189027693 <br />
+  <span class="contactIcon">
+   <i class="fa-brands fa-facebook"></i>
+</span> Castle Royal College Lagos <br />
+  <span class="contactIcon">
+   <i class="fa-brands fa-youtube"></i>
+  </span> Castle Lagos <br />
+  <span class="contactIcon">
+   <i class="fa-solid fa-envelope"></i>
+  </span> castlelagos@gmail.com
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_insta">
+            <h5>
+              INFORMATION
+            </h5>
+      <p class="pr-0 pr-md-4 pr-md-5">
+   Founded in 2007 by Hon and Mrs Adeyemi, Castle Royal College has maintained years of excellent reputation in contemporary education and child nurturing!
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+         <div class="pl-0 pl-lg-5 pl-md-4">
+      <h5> SCHOOL ACCOUNT </h5>
+     <p>
+  All payment is made into the school account details. Verification and receipt are consequently issued. <br />
+  • Account name: Castle Royal College, Lagos <br />
+ • Account number: 0172689352 <br />
+  • Bank name: Zenith Bank
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Castle Royal College, Lagos <br />
+    &copy; 2024 All Rights Reserved <br />
+      Powered By
+      <a href="https://html.design/">Phenomenal Inc.</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script src="js/student-dashboard.js" type="text/javascript"></script>
+  <script src="js/scroll-to-top.js" type="text/javascript"></script>
+
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  </script>
+</body>
+
+</html>
