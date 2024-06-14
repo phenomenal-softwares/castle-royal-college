@@ -1,0 +1,451 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#paymentHistory, #session23, #session22, #staffDirectory, #schoolCalendar, #pta, #counseling, #checkResults, #child1 {
+  display: none;
+  transition: all 1s;
+}
+
+.hero_area_dashboard {
+  height: 5vh;
+}
+.info_section {
+  position: relative;
+  margin-top: 30vh;
+}
+
+.heading {
+  color: #a51f04;
+  text-align: center;
+}
+.parent-avatar {
+  width: 50%;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px #cdcdcd;
+  margin: 30px auto;
+  text-align: center;
+}
+.parent-bio {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  gap: 10px;
+}
+.parent-logo {
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.parent-details {
+  text-align: left;
+}
+#gridLayout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  list-style-type: none;
+  height: 50%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.gridItem {
+  color: white;
+  background-color: #a51f04;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px;
+}
+.gridIcon {
+  font-size: 5em;
+}
+.yellow {
+  background-color: #978600;
+}
+.blue{
+  background-color: #0113aa;
+}
+.gridItem:hover .gridIcon {
+  font-size: 5.5em;
+}
+.gridItem:hover {
+  background-color: #681100;
+}
+.yellow:hover {
+  background-color: #615600;
+}
+.blue:hover {
+  background-color: #000b69;
+}
+td {
+  padding: 5px;
+}
+.kid-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.kid-details {
+ background-color: rgba(235,235,235,0.3);
+ border-radius: 10px;
+ overflow: scroll;
+ margin-bottom: 20px;
+}
+.kid-table {
+  width: 80vw;
+  border-bottom: 1px dotted #ababab;
+  margin-bottom: 20px;
+}
+tr:nth-child(even){
+  background-color: rgba(187,187,187,0.2);
+}
+.kid-image {
+  border-radius: 50px;
+  margin-left: 30%;
+}
+
+/* payment history */
+.session-flex, .staff-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* drop-down select session */
+.dropbtn {
+  background-color: #a51f04;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content, .dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content button, .dropdown-content2 button {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  outline: none;
+  border: none;
+}
+.dropdown-content button:hover, .dropdown-content2 button:hover {
+  background-color: rgba(165,31,4,0.2);
+}
+.dropdown:hover .dropbtn {
+  background-color: #6d1301;
+  font-weight: bold;
+}
+
+.payment-section, .staff-directory {
+  overflow: scroll;
+}
+.payment-details {
+  width: 90vw;
+}
+.expenses-table {
+  width: 80vw;
+}
+.expenses {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.expenses-info{
+  color: gray;
+}
+.expenses-detail {
+  font-size: 14px;
+  font-weight: 600;
+}
+/* staff-directory */
+
+.search-icon {
+  background-color: rgba(165,31,4,0.1);
+  border: none;
+  border-radius: 20px 0 0 20px;
+  padding: 12px;
+  margin-right: -4px;
+}
+#searchbar {
+  border: none;
+  outline: none;
+  border-radius: 0 20px 20px 0;
+  padding: 10px;
+  font-family: Monospace;
+  background-color: rgba(165,31,4,0.1);
+  width: 30%;
+  transition: all 1s;
+}
+#searchbar:focus {
+  width: 80%;
+}
+.staff-list, .staff-table {
+  width: 150vw;
+}
+.staff-name {
+  text-transform: uppercase;
+}
+.staff-photo {
+  border-radius: 50px;
+}
+.department {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
+  justify-content: space-between;
+}
+.bold {
+  font-weight: bold;
+}
+.staff-review {
+  display: flex;
+  justify-content: space-around;
+}
+.star-rating {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  width: 100%;
+  color: gray;
+}
+
+.child-report-staff {
+  display: flex;
+  flex-direction: column;
+}
+.child-report-issues {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+/* PTA */
+.pta-table {
+  font-size: 16px;
+}
+/* counseling */
+.counselling-table {
+  width: 80vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+#appointmentModal {
+  display: none;
+  border-left: 5px solid #a51f04;
+  position: absolute;
+  width: 50%;
+}
+.modal-line-countdown {
+  height: 5px;
+  width: 100%;
+  background-color: rgba(165,31,4,0.2);
+}
+
+/* student progress chart */
+.table-chart {
+  overflow: scroll;
+  max-width: 80vw;
+}
+#column-example-15 {
+  display: flex;
+  margin: 0 auto;
+  width: 120vw;
+  height: 15vh;
+}
+.chart-numbers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 19em;
+  margin-right: 10px;
+  color: grey;
+}
+#column-example-15 .column {
+  --aspect-ratio: 4 / 3;
+}
+#column-example-15 tr:nth-child(even) {
+  background-color: rgba(203,203,203,0.4);
+}
+.chart-legend {
+  display: flex;
+  flex-direction: row;
+}
+.chart-legend ul {
+  font-weight: 700;
+  font-size: 14px;
+}
+.current-term li {
+  color: #00984a;
+}
+.last-term li {
+  color: #ffb300;
+}
+.two-terms-ago li {
+  color: #0089ff;
+}
+
+td {
+  padding: 5px;
+}
+
+/* check results */
+.slider {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  /*
+  scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: mandatory;
+  */
+}
+
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.slides::-webkit-scrollbar-thumb {
+  background: #a51f04;
+  border-radius: 10px;
+}
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+.slides > div {
+  scroll-snap-align: start;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 300px;
+  height: 500px;
+  margin-right: 50px;
+  border-radius: 10px;
+  background: #eee;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+.slides > div:target {
+/*  transform: scale(0.8); */
+}
+
+.slider > a {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+  background: #a51f04;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 20px 0 0.5rem 0;
+  position: relative;
+}
+.slider > a:active {
+  top: 1px;
+}
+.slider > a:focus {
+  background: #000;
+}
+
+/* Don't need button navigation */
+@supports (scroll-snap-type) {
+  .slider > a {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 720px) {
+ .hero_area_dashboard {
+  height: 10vh;
+}
+.parent-avatar {
+  width: auto;
+}
+.parent-info {
+  overflow: scroll;
+}
+.parent-details {
+  width: 50vh;
+}
+  #gridLayout {
+  grid-template-columns: repeat(2, 1fr);
+  }
+  .kid-details-grid {
+  display: flex;
+  flex-direction: column;
+  }
+  .kid-table {
+  width: 150vw;
+  }
+.table-chart {
+  overflow: scroll;
+  max-width: 300px;
+}
+#column-example-15 {
+  width: 250vw;
+  height: 40vh;
+}
+.chart-numbers {
+  height: 22em;
+}
+.chart-legend {
+  display: flex;
+  flex-direction: column;
+}
+  /* payment section*/
+  .session-flex, .staff-flex {
+  flex-direction: column;
+}
+  .payment-details {
+  width: 150vw;
+}
+.expenses-table {
+  width: 140vw;
+}
+  /* staff section */
+  .search-area {
+  width: 100%;
+}
+  .staff-list, .staff-table {
+  width: 320vw;
+}
+/* counselling */
+.counselling-details {
+  overflow: scroll;
+}
+.counselling-table {
+  width: 110vw;
+}
+.links-container {
+  background-color: wheat;
+  padding: 20px;
+  margin: 10px;
+  width: 70%;
+  border-radius: 30px 0;
+}
+
+}

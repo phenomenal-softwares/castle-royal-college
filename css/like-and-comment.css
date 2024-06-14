@@ -1,0 +1,65 @@
+.inputArea {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  width: 50%;
+  justify-items: start;
+}
+#likeIcon {
+  font-size: 25px;
+}
+.input_field {
+  width: 100%;
+}
+.commentInput {
+  outline: none;
+  border: 1px solid #cbc5c5;
+  width: 50%;
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  transition: all 0.5s;
+}
+.commentInput:focus {
+  border: 2px solid #a51f04;
+  width: 100%;
+  color: #a51f04;
+  background-color: #ffff8e;
+}
+.sendBtn {
+  outline: none;
+  border: none;
+  background: none;
+  color: #a51f04;
+  font-size: 25px;
+  display: none;
+  transition-delay: all 1s;
+}
+.like-and-comment-stat {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  font-weight: bold;
+  font-size: 12px;
+  color: gray;
+  width: 50%;
+}
+.commentArea {
+  padding: 10px;
+}
+.indivComment {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  padding: 10px;
+  margin-bottom: -2em;
+  width: 50%;
+}
+.userIcon {
+  border-radius: 50%;
+}
+.userComment {
+  background-color: rgba(128,128,128,0.2);
+  border-radius: 20px;
+  padding: 10px;
+}
+.time-and-date {
+  font-size: 12px;
+}

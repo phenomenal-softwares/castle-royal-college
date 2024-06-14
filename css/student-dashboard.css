@@ -1,0 +1,562 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#session23, #session22, #ss1, #paymentHistory, #myClassmates, #staffDirectory, #schoolCalendar, #myKids, #timetable, #checkResults, #counseling, #complaints {
+  display: none;
+  transition: all 1s;
+}
+
+.hero_area_dashboard {
+  height: 5vh;
+}
+.info_section {
+  position: relative;
+  margin-top: 2vh;
+}
+
+.heading {
+  color: #a51f04;
+  text-align: center;
+}
+.grid-layout {
+  display: flex;
+  justify-content: flex-start;
+}
+.side-bar-btn {
+  display: none;
+}
+.side-bar {
+  display: block;
+  width: 28%;
+  text-align: left;
+  margin-left: -5%;
+  background-color: #460c00;
+}
+.student-profile {
+  display: flex;
+  flex-direction: column;
+}
+.student-name {
+  color: #a51f04;
+  background-color: white;
+  padding-left: 20%;
+}
+.side-menu {
+  list-style-type: none;
+}
+.kid-profile-pic {
+  border: 2px solid white;
+  width: 100%;
+}
+.gridItem {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 20px;
+  border-bottom: 2px solid #bababa;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+.gridIcon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.gridItem:hover {
+  opacity: 1;
+  color: yellow;
+}
+.gridItem-active {
+  background-color: #0f0049;
+  opacity: 1;
+}
+
+.main-site {
+  width: 72%;
+}
+.info-overview {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.info-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.info-icon {
+  font-size: 30px;
+  color: #a51f04;
+  background-color: rgba(165,165,4,0.21);
+  border-radius: 100%;
+  padding: 5px 20px;
+}
+.info-detail {
+  text-align: right;
+}
+.info-text {
+  font-size: 14px;
+}
+.info-figure {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.timetable, .assignment-table, .event-table {
+  width: 100%;
+}
+
+/* student progress chart */
+.table-chart {
+  overflow: scroll;
+  max-width: 80vw;
+}
+#column-example-15 {
+  display: flex;
+  margin: 0 auto;
+  width: 120vw;
+  height: 15vh;
+}
+.chart-numbers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 19em;
+  margin-right: 10px;
+  color: grey;
+}
+#column-example-15 tr:nth-child(even) {
+  background-color: rgba(203,203,203,0.4);
+}
+#column-example-15 .column {
+  --aspect-ratio: 4 / 3;
+}
+.chart-legend {
+  display: flex;
+  flex-direction: row;
+}
+.chart-legend ul {
+  font-weight: 700;
+  font-size: 14px;
+}
+.current-term li {
+  color: #00984a;
+}
+.last-term li {
+  color: #ffb300;
+}
+.two-terms-ago li {
+  color: #0089ff;
+}
+
+td {
+  padding: 5px;
+}
+
+/* check results */
+.slider {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  /*
+  scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: mandatory;
+  */
+}
+
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.slides::-webkit-scrollbar-thumb {
+  background: #a51f04;
+  border-radius: 10px;
+}
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+.slides > div {
+  scroll-snap-align: start;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 300px;
+  height: 500px;
+  margin-right: 50px;
+  border-radius: 10px;
+  background: #eee;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+.slides > div:target {
+/*  transform: scale(0.8); */
+}
+
+.slider > a {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+  background: #a51f04;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 20px 0 0.5rem 0;
+  position: relative;
+}
+.slider > a:active {
+  top: 1px;
+}
+.slider > a:focus {
+  background: #000;
+}
+
+/* Don't need button navigation */
+@supports (scroll-snap-type) {
+  .slider > a {
+    display: none;
+  }
+}
+
+.kid-details {
+ background-color: rgba(235,235,235,0.3);
+ border-radius: 10px;
+ overflow: scroll;
+ margin-bottom: 20px;
+}
+.kid-table {
+  width: 100vw;
+  border-bottom: 1px dotted #ababab;
+  margin-bottom: 20px;
+}
+tr:nth-child(even){
+  background-color: rgba(187,187,187,0.2);
+}
+.kid-image {
+  border-radius: 50px;
+  margin-left: 30%;
+}
+
+/* classmates */
+.classmate-avatars {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+.classmate-profile {
+  text-align: center;
+  border: 2px solid #a51f04;
+}
+.classmate-profile:hover {
+  background-color: rgba(255,179,0,0.3);
+  font-weight: bold;
+}
+.classmate-card {
+  width: 350px;
+  background-color: white;
+  height: 500px;
+  margin-top: 30%;
+  margin-left: 40%;
+  padding: 5px;
+}
+.classmate-image {
+  border-radius: 50px;
+  margin-left: 30%;
+}
+.classmate-table {
+  width: 350px;
+}
+
+/* payment history */
+.session-flex, .staff-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* drop-down select session */
+.dropbtn {
+  background-color: #a51f04;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content, .dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content button, .dropdown-content2 button {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  outline: none;
+  border: none;
+}
+.dropdown-content button:hover, .dropdown-content2 button:hover {
+  background-color: rgba(165,31,4,0.2);
+}
+.dropdown:hover .dropbtn {
+  background-color: #6d1301;
+  font-weight: bold;
+}
+
+.payment-section, .staff-directory {
+  overflow: scroll;
+}
+.payment-details {
+  width: 90vw;
+}
+.expenses-table {
+  width: 80vw;
+}
+.expenses {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.expenses-info{
+  color: gray;
+}
+.expenses-detail {
+  font-size: 14px;
+  font-weight: 600;
+}
+/* staff-directory */
+.search-icon {
+  background-color: rgba(165,31,4,0.1);
+  border: none;
+  border-radius: 20px 0 0 20px;
+  padding: 12px;
+  margin-right: -4px;
+}
+#searchbar, #searchClassmate {
+  border: none;
+  outline: none;
+  border-radius: 0 20px 20px 0;
+  padding: 10px;
+  font-family: Monospace;
+  background-color: rgba(165,31,4,0.1);
+  width: 30%;
+  transition: all 1s;
+}
+#searchbar:focus, #searchClassmate:focus {
+  width: 80%;
+}
+.staff-list, .staff-table {
+  width: 150vw;
+}
+.staff-name {
+  text-transform: uppercase;
+}
+.department {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
+  justify-content: space-between;
+}
+.bold {
+  font-weight: bold;
+}
+.staff-review {
+  display: flex;
+  justify-content: space-around;
+}
+.star-rating {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  width: 100%;
+  color: gray;
+}
+.staff-photo-album {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.child-report-staff {
+  display: flex;
+  flex-direction: column;
+}
+.child-report-issues {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+/* counseling */
+.counselling-table {
+  width: 80vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+#appointmentModal, #reportModal {
+  display: none;
+  border-left: 5px solid #0417a5;
+  position: absolute;
+  width: 50%;
+}
+.modal-line-countdown {
+  height: 5px;
+  width: 100%;
+  background-color: rgba(165,31,4,0.2);
+}
+#reportField {
+  margin: 10px;
+  padding: 10px;
+  border: solid 2px #a51f04;
+  font-weight: bold;
+}
+#reportField:focus {
+  background-color: rgba(255,255,0,0.1);
+}
+
+@media only screen and (max-width: 720px) {
+ .hero_area_dashboard {
+  height: 10vh;
+}
+.side-bar-btn, .side-bar-btn-close {
+  font-size: 25px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+.side-bar-btn {
+  display: block;
+  position: fixed;
+  color: white;
+  background-color: #460c00;
+  z-index: 2;
+}
+.side-bar-btn-close {
+  position: absolute;
+  color: #460c00;
+  background-color: #fff;
+  right: 5%;
+  top: 5%;
+}
+.side-bar {
+  display: none;
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  top: 10%;
+  z-index: 2;
+}
+.student-name {
+  padding-left: 10%;
+}
+.side-menu {
+  margin-left: -30px;
+}
+.kid-profile-pic {
+  border: 2px solid white;
+  width: 50%;
+}
+.gridItem {
+  padding: 10px;
+  font-size: 10px;
+}
+.gridIcon {
+  margin-right: 5px;
+  font-size: 12px;
+}
+.main-site {
+  width: 100%;
+}
+.info-overview {
+  display: flex;
+  flex-direction: column;
+}
+.table-chart {
+  overflow: scroll;
+  max-width: 300px;
+}
+#column-example-15 {
+  width: 250vw;
+  height: 40vh;
+}
+.chart-numbers {
+  height: 22em;
+}
+.chart-legend {
+  display: flex;
+  flex-direction: column;
+}
+  .kid-table {
+  width: 100vw;
+  }
+.classmate-avatars {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.classmate-card {
+  width: 300px;
+  overflow: scroll;
+  background-color: white;
+  height: 450px;
+  margin-top: 40%;
+  margin-left: 10%;
+  padding: 5px;
+}
+.classmate-table {
+  width: 270px;
+}
+  /* payment section*/
+  .session-flex, .staff-flex {
+  flex-direction: column;
+}
+  .payment-details {
+  width: 150vw;
+}
+.expenses-table {
+  width: 140vw;
+}
+  /* staff section */
+  .search-area {
+  width: 100%;
+}
+  .staff-list, .staff-table {
+  width: 320vw;
+}
+.staff-photo-album {
+  grid-template-columns: 50% 50%;
+  gap: 10px;
+}
+/* counselling */
+.counselling-details {
+  overflow: scroll;
+}
+.counselling-table {
+  width: 110vw;
+}
+.links-container {
+  background-color: wheat;
+  padding: 20px;
+  margin: 10px;
+  width: 70%;
+  border-radius: 30px 0;
+}
+
+}

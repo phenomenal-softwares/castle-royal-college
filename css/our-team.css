@@ -1,0 +1,87 @@
+.hero_area_campus {
+  height: 5vh;
+}
+.team {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.staff-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.staff-directory {
+  overflow: scroll;
+}
+.search-icon {
+  background-color: rgba(165,31,4,0.1);
+  border: none;
+  border-radius: 20px 0 0 20px;
+  padding: 12px;
+  margin-right: -4px;
+}
+#searchbar {
+  border: none;
+  outline: none;
+  border-radius: 0 20px 20px 0;
+  padding: 10px;
+  font-family: Monospace;
+  background-color: rgba(165,31,4,0.1);
+  width: 30%;
+  transition: all 1s;
+}
+#searchbar:focus {
+  width: 80%;
+}
+.staff-list, .staff-table {
+  width: 150vw;
+}
+.staff-name {
+  text-transform: uppercase;
+}
+.staff-photo {
+  border-radius: 50px;
+}
+.department {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
+  justify-content: space-between;
+}
+.bold {
+  font-weight: bold;
+}
+
+.more {
+  color: #a51f04;
+  margin: 20px;
+  padding: 15px;
+  border-top: 3px solid #a51f04;
+  border-bottom: 3px solid #a51f04;
+}
+.blue {
+  color: #040fa5;
+  border-top: 3px solid #040fa5;
+  border-bottom: 3px solid #040fa5;
+}
+
+
+@media only screen and (max-width: 720px) {
+ .hero_area_campus {
+  height: 10vh;
+}
+  .team{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .staff-flex {
+  flex-direction: column;
+}
+ /* staff section */
+  .search-area {
+  width: 100%;
+}
+  .staff-list, .staff-table {
+  width: 320vw;
+}
+}
